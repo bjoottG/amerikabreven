@@ -1,5 +1,5 @@
 const express = require('express');
-const session = require('express-session');
+const cookieSession = require('cookie-session');
 const path = require('path');
 
 const app = express();
@@ -11,11 +11,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/data', express.static(path.join(__dirname, 'data')));
 app.use(express.urlencoded({ extended: true }));
-app.use(session({
+app.use(cookieSession({
+  name: 'ab_session',
   secret: process.env.SESSION_SECRET || 'amerikabreven-secret-2024',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 7 * 24 * 60 * 60 * 1000 }
+  maxAge: 30 * 24 * 60 * 60 * 1000,
+  httpOnly: true,
+  sameSite: 'lax'
 }));
 
 function requireAuth(req, res, next) {
@@ -57,7 +58,7 @@ app.post('/login', (req, res) => {
 });
 
 app.get('/logout', (req, res) => {
-  req.session.destroy();
+  req.session = null;
   res.redirect('/login');
 });
 

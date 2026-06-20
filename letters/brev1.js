@@ -218,14 +218,14 @@ P.S. Är fröken Ölander återkommen och hur var det med hennes far? —
 Om Ni skrifver, adressera brefven till Los Angeles, poste restante, California, North America.`,
 
   scan1950: [
-    'PXL_20260604_185219434.jpg',
-    'PXL_20260604_192339971.jpg'
+    'PXL_20260604_192339971.jpg',
+    'PXL_20260604_185219434.jpg'
   ],
 
   pdf: {
     sv: 'output_1890-04-18_modern_svenska-v4.pdf',
     en: 'output_1890-04-18_modern_engelska-v4.pdf',
-    original: 'output_1890-04-18_original.pdf',
+    original: 'output_1890-04-18_originalv2.pdf',
     sammansv: 'output_1890-04-18_sammanfattning_svenska-v3.pdf',
     summen: 'output_1890-04-18_summary_english-v3.pdf'
   }

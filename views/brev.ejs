@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? brevet.en.title : brevet.sv.rubrik %> – Amerikabreven</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1><a href="/?lang=<%= lang %>" class="header-lank">Amerikabreven</a></h1>
+      <p class="undertitel">
+        <% if (lang === 'en') { %>Letters and stories from those who sailed to America<% } else { %>Berättelser och brev från dem som reste till Amerika<% } %>
+      </p>
+      <nav>
+        <a href="/?lang=<%= lang %>"><%= lang === 'en' ? 'All letters' : 'Alla brev' %></a>
+        <a href="/logout"><%= lang === 'en' ? 'Log out' : 'Logga ut' %></a>
+        <div class="lang-vaxlare">
+          <a href="/brev/<%= brevet.id %>?lang=sv" class="lang-knapp<%= lang === 'sv' ? ' aktiv' : '' %>">SV</a>
+          <span class="lang-sep">|</span>
+          <a href="/brev/<%= brevet.id %>?lang=en" class="lang-knapp<%= lang === 'en' ? ' aktiv' : '' %>">EN</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <a href="/?lang=<%= lang %>" class="tillbaka-lank">&larr; <%= lang === 'en' ? 'All letters' : 'Alla brev' %></a>
+
+    <%
+      const innehall = lang === 'en' ? brevet.en : brevet.sv;
+      const rubrik = lang === 'en' ? brevet.en.title : brevet.sv.rubrik;
+      const sammanfattning = lang === 'en' ? brevet.en.summary : brevet.sv.sammanfattning;
+      const sektioner = lang === 'en' ? brevet.en.sections : brevet.sv.sektioner;
+      const bildFolderUrl = '/data/brev/foton/' + brevet.id + '/';
+    %>
+
+    <article class="brev-artikel">
+
+      <div class="brev-header">
+        <h2 class="brev-rubrik"><%= rubrik %></h2>
+        <div class="brev-info">
+          <span>&#9998; <%= brevet.avsandare %></span>
+          <span>&#128197; <%= lang === 'en' ? brevet.datumEn : brevet.datumSv %></span>
+          <span>&#9992; <%= brevet.ort %></span>
+        </div>
+      </div>
+
+      <!-- SAMMANFATTNING -->
+      <details class="sammanfattning-sektion" open>
+        <summary class="sektion-rubrik">
+          <span><%= lang === 'en' ? 'Summary' : 'Sammanfattning' %></span>
+          <span class="pil">&#9660;</span>
+        </summary>
+        <div class="sammanfattning-innehall">
+          <% sammanfattning.forEach(punkt => { %>
+            <div class="sammanfattning-punkt">
+              <h4><%= lang === 'en' ? punkt.title : punkt.rubrik %></h4>
+              <p><%= lang === 'en' ? punkt.text : punkt.text %></p>
+            </div>
+          <% }) %>
+        </div>
+      </details>
+
+      <!-- BREVTEXT MED BILDER -->
+      <div class="brev-kropp">
+        <% sektioner.forEach(sektion => { %>
+          <% const typ = sektion.typ || sektion.type; %>
+
+          <% if (typ === 'text') { %>
+            <div class="brev-text-sektion">
+              <%- (sektion.innehall || sektion.content).split('\n\n').map(stycke =>
+                '<p>' + stycke.replace(/\n/g, '<br>') + '</p>'
+              ).join('') %>
+            </div>
+
+          <% } else if (typ === 'bild' || typ === 'image') { %>
+            <figure class="brev-figur">
+              <img
+                src="<%= bildFolderUrl + (sektion.fil || sektion.file) %>"
+                alt="<%= sektion.bildtext || sektion.caption %>"
+                loading="lazy"
+                class="brev-bild lightbox-trigger"
+                data-src="<%= bildFolderUrl + (sektion.fil || sektion.file) %>"
+              >
+              <figcaption><%= sektion.bildtext || sektion.caption %></figcaption>
+            </figure>
+
+          <% } else if (typ === 'avslutning' || typ === 'closing') { %>
+            <div class="brev-avslutning">
+              <%- (sektion.innehall || sektion.content).split('\n\n').map(stycke =>
+                '<p>' + stycke.replace(/\n/g, '<br>') + '</p>'
+              ).join('') %>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+
+    </article>
+
+    <!-- ORIGINALTEXT -->
+    <details class="extra-sektion">
+      <summary class="sektion-rubrik">
+        <span><%= lang === 'en' ? 'Original text (archaic Swedish)' : 'Originaltext (gammeldags svenska)' %></span>
+        <span class="pil">&#9660;</span>
+      </summary>
+      <div class="original-text">
+        <%- brevet.original.split('\n\n').map(stycke =>
+          '<p>' + stycke.replace(/\n/g, '<br>') + '</p>'
+        ).join('') %>
+      </div>
+    </details>
+
+    <!-- AVSKRIVNINGAR FRÅN 1950 -->
+    <details class="extra-sektion">
+      <summary class="sektion-rubrik">
+        <span><%= lang === 'en' ? 'Transcription photos from the 1950s' : 'Avskrivningsfoton från 1950-talet' %></span>
+        <span class="pil">&#9660;</span>
+      </summary>
+      <div class="sektion-innehall">
+        <p class="sektion-beskrivning">
+          <% if (lang === 'en') { %>
+            Photographs of handwritten transcriptions made by Margit Otterberg in the 1950s.
+          <% } else { %>
+            Foton av handskrivna avskrivningar gjorda av Margit Otterberg under 1950-talet.
+          <% } %>
+        </p>
+        <div class="scan-galleri">
+          <% brevet.scan1950.forEach((fil, i) => { %>
+            <a href="/data/brev/scan1950/<%= brevet.id %>/<%= fil %>" class="scan-thumbnail lightbox-trigger" data-src="/data/brev/scan1950/<%= brevet.id %>/<%= fil %>" target="_blank">
+              <img
+                src="/data/brev/scan1950/<%= brevet.id %>/<%= fil %>"
+                alt="<%= lang === 'en' ? 'Transcription page ' + (i+1) : 'Avskrivningssida ' + (i+1) %>"
+                loading="lazy"
+              >
+              <span><%= lang === 'en' ? 'Page ' + (i+1) : 'Sida ' + (i+1) %></span>
+            </a>
+          <% }) %>
+        </div>
+      </div>
+    </details>
+
+    <!-- PDF-NEDLADDNINGAR -->
+    <div class="pdf-sektion">
+      <h3 class="pdf-rubrik"><%= lang === 'en' ? 'Download PDF versions' : 'Ladda ned PDF-versioner' %></h3>
+      <div class="pdf-knappar">
+        <a href="/data/brev/pdf/<%= brevet.id %>/<%= brevet.pdf.sv %>" class="pdf-knapp" download>
+          <span class="pdf-ikon">&#128196;</span>
+          <span class="pdf-etikett"><%= lang === 'en' ? 'Modern Swedish' : 'Modern svenska' %></span>
+          <span class="pdf-typ">PDF</span>
+        </a>
+        <a href="/data/brev/pdf/<%= brevet.id %>/<%= brevet.pdf.en %>" class="pdf-knapp" download>
+          <span class="pdf-ikon">&#128196;</span>
+          <span class="pdf-etikett"><%= lang === 'en' ? 'English translation' : 'Engelsk översättning' %></span>
+          <span class="pdf-typ">PDF</span>
+        </a>
+        <a href="/data/brev/pdf/<%= brevet.id %>/<%= brevet.pdf.sammansv %>" class="pdf-knapp" download>
+          <span class="pdf-ikon">&#128196;</span>
+          <span class="pdf-etikett"><%= lang === 'en' ? 'Summary (Swedish)' : 'Sammanfattning (sv)' %></span>
+          <span class="pdf-typ">PDF</span>
+        </a>
+        <a href="/data/brev/pdf/<%= brevet.id %>/<%= brevet.pdf.summen %>" class="pdf-knapp" download>
+          <span class="pdf-ikon">&#128196;</span>
+          <span class="pdf-etikett"><%= lang === 'en' ? 'Summary (English)' : 'Sammanfattning (en)' %></span>
+          <span class="pdf-typ">PDF</span>
+        </a>
+        <a href="/data/brev/pdf/<%= brevet.id %>/<%= brevet.pdf.original %>" class="pdf-knapp" download>
+          <span class="pdf-ikon">&#128196;</span>
+          <span class="pdf-etikett"><%= lang === 'en' ? 'Original (archaic Swedish)' : 'Original (gammeldags)' %></span>
+          <span class="pdf-typ">PDF</span>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; Amerikabreven &mdash; <%= lang === 'en' ? 'an archive of memories and longing' : 'ett arkiv över minnen och längtan' %>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="<%= lang === 'en' ? 'Image viewer' : 'Bildvisare' %>">
+    <button class="lightbox-stang" id="lightbox-stang" aria-label="<%= lang === 'en' ? 'Close' : 'Stäng' %>">&times;</button>
+    <img id="lightbox-bild" src="" alt="">
+    <p id="lightbox-bildtext" class="lightbox-bildtext"></p>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxBild = document.getElementById('lightbox-bild');
+    const lightboxBildtext = document.getElementById('lightbox-bildtext');
+    const lightboxStang = document.getElementById('lightbox-stang');
+
+    document.querySelectorAll('.brev-bild').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxBild.src = img.dataset.src;
+        lightboxBild.alt = img.alt;
+        lightboxBildtext.textContent = img.alt;
+        lightbox.classList.add('aktiv');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function stangLightbox() {
+      lightbox.classList.remove('aktiv');
+      document.body.style.overflow = '';
+      lightboxBild.src = '';
+    }
+
+    lightboxStang.addEventListener('click', stangLightbox);
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) stangLightbox();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') stangLightbox();
+    });
+
+    document.querySelectorAll('details.extra-sektion').forEach(det => {
+      det.addEventListener('toggle', () => {
+        const pil = det.querySelector('.pil');
+        if (pil) pil.textContent = det.open ? '▲' : '▼';
+      });
+    });
+    document.querySelectorAll('details.sammanfattning-sektion').forEach(det => {
+      det.addEventListener('toggle', () => {
+        const pil = det.querySelector('.pil');
+        if (pil) pil.textContent = det.open ? '▲' : '▼';
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amerikabreven</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Amerikabreven</h1>
+      <p class="undertitel">
+        <% if (lang === 'en') { %>Letters and stories from those who sailed to America<% } else { %>Berättelser och brev från dem som reste till Amerika<% } %>
+      </p>
+      <nav>
+        <a href="/?lang=<%= lang %>"><%= lang === 'en' ? 'Letters' : 'Breven' %></a>
+        <a href="/logout"><%= lang === 'en' ? 'Log out' : 'Logga ut' %></a>
+        <div class="lang-vaxlare">
+          <a href="/?lang=sv" class="lang-knapp<%= lang === 'sv' ? ' aktiv' : '' %>">SV</a>
+          <span class="lang-sep">|</span>
+          <a href="/?lang=en" class="lang-knapp<%= lang === 'en' ? ' aktiv' : '' %>">EN</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <p class="intro-text">
+      <% if (lang === 'en') { %>
+        In the late 19th and early 20th centuries, hundreds of thousands of Swedes left their homes for a new life in America.
+        These letters are their voices — written by oil lamp, at kitchen tables, with homesickness in their hands and hope in their hearts.
+      <% } else { %>
+        Under slutet av 1800-talet och tidigt 1900-tal lämnade hundratusentals svenskar sina hem för ett nytt liv i Amerika.
+        Dessa brev är deras röster — skrivna vid oljelampor, på köksbordet, med hemlängtan i handen och hopp i hjärtat.
+      <% } %>
+    </p>
+
+    <div class="brev-lista">
+      <% brev.forEach(b => { %>
+        <article class="brevkort">
+          <div class="brevkort-meta">
+            <span class="brevkort-avsandare"><%= b.avsandare %></span>
+            <span class="brevkort-datum"><%= b.datum %></span>
+          </div>
+          <p class="brevkort-ort">&#9992; <%= b.ort %></p>
+          <h2><%= b.rubrik %></h2>
+          <p class="ingress"><%= b.ingress %></p>
+          <a href="/brev/<%= b.id %>?lang=<%= lang %>" class="las-mer">
+            <%= lang === 'en' ? 'Read the letter' : 'Läs brevet' %> &rarr;
+          </a>
+        </article>
+      <% }) %>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Amerikabreven &mdash; <%= lang === 'en' ? 'an archive of memories and longing' : 'ett arkiv över minnen och längtan' %>
+  </footer>
+</body>
+</html>

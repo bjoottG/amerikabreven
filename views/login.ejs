@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amerikabreven – Inloggning</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+  <div class="login-omslag">
+    <div class="login-kort">
+      <h1 class="login-titel">Amerikabreven</h1>
+      <p class="login-underrubrik">Berättelser och brev från dem som reste till Amerika</p>
+
+      <% if (fel) { %>
+        <div class="felmeddelande"><%= fel %></div>
+      <% } %>
+
+      <form method="POST" action="/login">
+        <div>
+          <label for="losenord">Lösenord</label>
+          <input type="password" id="losenord" name="losenord" placeholder="Ange lösenord" autofocus>
+        </div>
+        <button type="submit" class="login-knapp">Öppna brevsamlingen</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

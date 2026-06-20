@@ -29,7 +29,8 @@ function getLang(req) {
 }
 
 const brevData = [
-  require('./letters/brev1')
+  require('./letters/brev1'),
+  require('./letters/brev2')
 ];
 
 function getBrevIndex(lang) {

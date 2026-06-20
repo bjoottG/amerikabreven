@@ -1,0 +1,676 @@
+module.exports = {
+  id: 2,
+  datumSv: '1 maj 1890',
+  datumEn: 'May 1, 1890',
+  ort: 'Chicago, USA',
+  avsandare: 'D.',
+
+  sv: {
+    rubrik: 'Chicago, 1 maj 1890',
+    ingress: 'Nu skriver jag från Chicago, dit vi anlände i natt klockan ett. Jag berättar om den långa resan – från madrasskaos i Göteborg till storm på Atlanten och det tragi-komiska tågbytet i Port Huron.',
+    sammanfattning: [
+      {
+        rubrik: 'Resval i Göteborg och utrustning',
+        text: 'Brevskrivaren och hans kamrat Arvid bokade tredjeklassbiljetter till New York med Cunardlinjen för 80 kronor. De valde medvetet att möta resans svårigheter direkt. De köpte madrasser och matkärl i Göteborg, men drabbades av logistiskt strul då matkärl försvann redan innan avfärd.'
+      },
+      {
+        rubrik: 'Madrasskaos och förlorade tillhörigheter',
+        text: 'Madrasserna visade sig vara till mer besvär än nytta, smutsade ner kläderna och stals eller försvann tillsammans med bleckkärlen under det kaotiska bytet till Atlantångaren S/S Aurania. Detta tvingade dem att låna matkärl eller äta på papper under resan.'
+      },
+      {
+        rubrik: 'Den dramatiska Atlantöverfarten',
+        text: 'Resan tog nio dygn på grund av hårt väder. En våldsam storm drabbade fartyget, vilket ledde till utbredd sjösjuka bland de 1 100 passagerarna och besättningen. Mirakulöst nog klarade sig författaren och Arvid helt utan känning. Resan präglades även av kyla, möten med isberg vid Newfoundlandbankarna och en dygns lång tät dimma.'
+      },
+      {
+        rubrik: 'Ankomsten till New York och Castle Garden',
+        text: 'Före landstigningen utbröt ett mäktigt åskväder i dimman. Efter hälsoinspektion (smittkoppsvaccinering) möttes de av ett enormt språkligt och logistiskt kaos vid emigrantstationen Castle Garden. De tog in på ett billigt tyskt hotell med en svenskfödd ägare som hjälpte dem att ordna förmånliga tågbiljetter vidare västerut.'
+      },
+      {
+        rubrik: 'Tågresan till Chicago och det tragi-komiska tågbytet',
+        text: 'De reste med expresståg via Kanada och passerade Niagarafloden. Vid ett plötsligt tågbyte i Port Huron tvingades de i extrem brådska kuta över till ett nytt tåg i middagshettan, klädda i vinterrockar och bärande famnen full av lösa ägodelar som tofflor och ölflaskor. Som plåster på såren fick de åka i första klass resten av vägen till Chicago.'
+      },
+      {
+        rubrik: 'Framtidsplaner i det svensktäta Chicago',
+        text: 'Brevskrivaren fascinerades av den brända skogslandsbygden i Amerika och bristen på renlighet i städerna. Väl framme i Chicago konstaterade de att staden var mycket trevligare än New York. Eftersom tågbiljetterna till Los Angeles är giltiga i ett helt år, överväger de nu att stanna i Chicago en tid för att söka jobb och lära sig språket innan de reser vidare till Kalifornien.'
+      }
+    ],
+    sektioner: [
+      {
+        typ: 'text',
+        innehall: `Kära föräldrar!
+Sist jag skrev till er var det från Liverpool, men nu skriver jag från Chicago, dit vi anlände i natt klockan ett. I
+New York hann jag helt enkelt inte skriva. Jag hoppas att ni via Cunardlinjens agent i Göteborg har fått
+besked om att fartyget vi reste med anlände välbehållet till New York. Eftersom jag glömde att berätta om en
+hel del saker från den tidigare delen av resan när jag skrev från Liverpool, vill jag nu backa lite i tiden.
+Dagen innan vi lämnade Göteborg sprang vi runt till alla möjliga agenter för att hitta den linje och det fartyg
+som skulle passa oss bäst, och vi bestämde oss till slut för Cunardlinjen. För att ha så fria händer som möjligt
+vid ankomsten till New York, och inte riskera att bli fösta fram och tillbaka som boskap eller hamna på något
+dåligt emigranthotell, köpte vi bara biljetter till New York. De kostade 80 kronor per person i tredje klass. Vi
+blev visserligen rådda i Göteborg att köpa till en uppgradering till andra klass för sträckan mellan Göteborg
+och Hull, men det struntade vi i, eftersom vi från början hade bestämt oss för att möta resans svårigheter
+direkt. På emigrantkontoret fick vi köpa madrasser för 1,25 kronor styck, matkärl för 75 öre samt kniv, gaffel
+och rep för att binda om våra resväskor. Men när vi i sista stund gick ombord visade det sig att vi bara hade
+fått matkärl till den ene av oss; de andra gick inte att hitta. De hade förmodligen behövts av några andra, eller
+så hade agenten glömt att packa med dem.
+Efteråt ångrade vi djupt att vi köpte madrasser i Göteborg istället för att bara ta med oss varsin extra filt.
+Madrasserna orsakade oss nämligen mycket besvär och irritation, och var till väldigt liten nytta. För det första
+smutsade de ner våra kläder fruktansvärt när vi tvingades ligga på dem eller bära runt dem, och till slut togs
+de ändå ifrån oss när vi gick ombord på det stora Atlantfartyget. Vi sörjde inte direkt förlusten av dem, men vi
+var irriterade över allt besvär de givit oss. Vi hade alldeles för många kollon att hålla reda på, och deras antal
+och tyngd pressade fram många svettdroppar på oss, eftersom vi ofta tvingades bära dem långa sträckor,
+tungt klädda som vi var.
+Resan över Nordsjön har jag redan skrivit om. Hull var en mycket otrevlig och stenkolsrökig stad. Kontrasten
+när det gällde snygghet, ordning och renlighet var dock mycket stor mellan den engelska landsbygden och
+städerna. Det var det första vi lade märke till när vi satte oss på tåget mot Liverpool direkt efter ankomsten till
+Hull. Hela landsbygden såg ut som en vacker trädgård. Den kändes kanske lite väl stel med sina spikraka
+gångar, träd rader och häckar, men den var ändå mycket imponerande. En sak som förvånade mig oerhört
+var den totala bristen på telefoner; det verkar som man i England betraktar telefoner som överflödiga
+lyxartiklar. I Liverpool behövde vi som väl var bara stanna i en dag, medan många andra hade tvingats vänta
+där i en hel vecka på ett fartyg. På emigranthotellet i Liverpool var omkring 400–500 skandinaver samlade.
+Allt deras lättare bagage, förutom det man absolut inte ville riskera att få förstört och därför bar själv, lastades
+klockan fyra på morgonen den 18 april på två enorma vagnar som drogs av två gigantiska hästar. Hela
+emigrantskaran fick sedan gå till fots de två engelska milen till hamnen.
+Väl framme i hamnen gick vi ombord på en mindre hjulbåt som skulle ta oss ut till Atlantångaren på floden.
+Innan vi kom ombord hade vi dock en ganska slitsam men minnesvärd stund när vi bar vårt tunga bagage
+från bagagevagnarna genom en lång, brant tunnel ner till kajen i stor trängsel. Att vi hade mycket "nöje" av
+våra dammiga och luddiga madrasser i trängseln kan ni ju tänka er! Vi borstade och borstade, men var ändå
+ständigt lika dammiga. Dessutom var det mycket svårt att få tag på både tvättvatten och diskvatten ombord
+på både Nordsjöbåten och Atlantfartyget. Oavsett hur ofta vi försökte tvätta oss kände vi oss ständigt
+smutsiga på grund av allt sot och fett ombord. Men vi har hittills försökt ta allt från den komiska sidan – vi har
+svurit i ena stunden och skrattat gott i nästa.
+När hjulbåten lade till vid det stora Atlantfartyget, S/S Aurania, fick vi återigen kasta upp alla våra kappor,
+nattsäckar, korgar, matknyten, hattaskar, filtar och – naturligtvis – de där madrasserna på ryggen. Eftersom vi
+inte kunde bära allt på en gång nerför de branta trapporna till fartygets underdäck, var vi tvungna att lämna
+kvar en del på däck och gå två vändor. Det var då som våra madrasser, tillsammans med de fastbundna
+bleckmatkärlen, försvann. Madrasserna och kärlen såg likadana ut för alla, så det var helt omöjligt att hitta
+dem igen efter att repen skurits av. Vi var inte de enda som blev av med våra madrasser, och dem saknade vi
+inte särskilt mycket, men det var värre med matkärlen. Nu blev vi tvungna att låna av andra eller äta på
+papper istället för tallrikar.
+På Aurania var alla män placerade föröver, medan de ogifta kvinnorna och familjerna var placerade akteröver.
+I varje hytt fanns det fyra rader med britsar, två över- och två underkojer, med en smal gång i mitten. Varje rad
+hade sex liggplatser, vilket innebar att det fanns plats för 24 personer i varje hytt. Vi var dock bara 22 i vår,
+men det var otroligt trångt ändå. Maten vill jag inte säga för mycket om; den var delvis ganska bra, och resten
+kompletterade vi med vår medhavda matsäck. Det var bara själva sättet att äta som var mindre trevligt,
+eftersom det rådde stor brist på ordentliga matkärl och diskvatten.
+Första dagen hade vi en mycket behaglig resa över Irländska sjön och anlände under natten till söndagen
+den 20 april till Queenstown på Irland. Där ankrade fartyget för att ta ombord nya passagerare och färskt
+dricksvatten. Staden låg vackert på en strandsluttning i en vik. Denna del av ön verkade verkligen göra skäl
+för namnet "den gröna ön" med sin klara grönska, men det verkade finnas ont om träd och skuggiga platser.
+Vi fick tyvärr inte gå i land utan fick nöja oss med att titta från fartyget. I Queenstown ökade antalet emigranter
+med omkring 400–500 irländare, vilket gjorde att det totala antalet passagerare (inklusive första och andra
+klass) uppgick till 1 100 personer, utöver en besättning på 300 man – totalt 1 400 personer ombord. Under
+tiden vi låg för ankare pågick en livlig handel längs fartygets sidor med apelsiner för 8 öre styck, citroner,
+tobak och kläder. Samtidigt låg två andra rederiers fartyg där i samma ärende och avgick samtidigt som vi.
+Det ena fartyget hade fler hästkrafter än vårt men en trubbigare för, så det kom inte fram till New York före
+oss; det tredje fartyget kom fram långt senare.
+Redan dagen efter att vi lämnat Irland fick vi en hård motvind som tilltog ju längre vi kom. En natt drabbades
+vi av full storm, och då blev i stort sett alla emigranter sjösjuka. De skrek och jämrade sig så pass att det var
+helt eländigt att höra på. Det var inte särskilt behagligt att ligga i hytten och känna de våldsamma rullningarna
+och se allt elände runt omkring sig. Det var likadant uppe på däck om dagarna. Men tänk er – varken jag eller
+Arvid kände av minsta lilla sjösjuka den här gången heller! Jag tror att det bara var runt 10 till 15 personer av
+de 1 100 passagerarna som klarade sig helt, och vi såg till och med många av sjömännen bli sjuka. Fartygets
+krängningar, när fören dök djupt ner och aktern lyftes så att propellern snurrade i tomma luften, var
+fruktansvärt obehagliga, särskilt när man var tvungen att vara under däck på natten. Trots att fartyget var så
+stort slog vågorna över den 40 fot höga fören och rann bakåt över däck och ner genom luckorna. Vädret var
+extremt ostadigt under hela resan, och när vi passerade Newfoundlandbankarna stötte vi på isberg i
+Golfströmmen. Under natten tvingades vi ibland gå för halv maskin eller ligga helt stilla. Dessutom var luften
+så kall att vi frös fruktansvärt i våra slafvar, eftersom luckorna till övre däck mestadels hölls öppna för
+ventilationens skull.
+Det absolut tråkigaste under resan var de fattiga irländska emigranterna som vi tvingades trängas med på
+däck. De beskrivs som smutsiga och högljudda där de bredde ut sig överallt mitt i smutsen. Kontrasten mot
+våra svenska flickor var enorm; de svenska tjejerna var rena, prydliga, friska och starka, medan de fattiga
+irländskorna ofta var smutsiga och ovårdade med rött eller svart stripigt hår. Men när de närmade sig New
+York "bytte de skinn" – mitt bland alla emigranter tog de fram sina finaste kläder och klädde upp sig ordentligt.
+När vi var ungefär ett dygns resa från New York körde vi in i en tjock dimma som varade i över ett dygn. Det
+gick inte att se mer än 30 famnar framåt. Ångaren tvingades tuta i signalhornet dygnet runt med bara två
+minuters mellanrum, och ju närmare inloppet till New York vi kom, desto långsammare gick vi för att undvika
+krockar. Dessutom tände fartyget starka elektriska strålkastare som lyste upp allt som om det vore mitt på
+ljusa dagen. På grund av dimman kunde vi inte hitta lotsbåten som var ute för att möta oss, så vi fick glida
+fram extremt långsamt under två dygn. Sista natten innan vi ankrade i New York fick vi uppleva ett fantastiskt
+skådespel då ett våldsamt åskväder bröt ut med skarpa blixtar och enorma dunder. På grund av den täta
+dimman lyste fartygets ljus upp dimman samtidigt som blixtarna slog ner från himlen, vilket gjorde oss helt
+bländade innan allt blev kolsvart igen. Samtidigt ösregnade det. Åskvädret varade i ungefär två timmar innan
+dimman äntligen började lätta. Vi gick och lade oss klockan ett på natten, och på morgonen den 28 april
+ankrade vi slutligen i New York. På grund av det svåra vädret tog resan nio dygn istället för de normala sju,
+trots att vi åkte med en av de snabbaste oceanångarna. En kväll under resan anordnades en konsert i första
+klassens salong med fritt tillträde för alla, och jag gick dit. Arvid låg under däck och missade det tyvärr. Det
+var förstaklasspassagerarna som uppträdde, och det var mycket trevligt även om jag inte förstod särskilt
+mycket av de engelska texterna, men musiken var fin att lyssna på.
+En frivillig insamling startades under konserten, men jag minns inte till vilket ändamål. Samma morgon som vi
+landade i New York fick vi genomgå en läkarundersökning på armarna för att kontrollera att vi var vaccinerade
+mot smittkoppor. De som inte hade tydliga ärr fick armarna rispade och vaccinerades på plats. Inloppet till
+New York är väldigt vackert, betydligt vackrare än själva staden, som känns ganska ful och enformig med sina
+tunga husrader och brist på parker och grönska. Gräset är grönt här, men träden har inte slagit ut än. Klimatet
+är ungefär som i Sverige; somrarna är varmare men vintrarna är ofta kallare. Jag har inte sett någon större
+blomsterprakt här i de östliga staterna ännu, det enda jag lagt märke till är sälg, maskrosor och några
+blommande fruktträd. Det verkar som att våren har kommit längre hemma i Sverige. Tidsskillnaden är för
+övrigt åtta timmar efter den svenska tiden.
+Vid inloppet till New York, med Brooklyn på ena sidan, New Jersey på den andra och själva New York med
+emigrantstationen Castle Garden på den tredje, står den enorma Frihetsgudinnan på en egen liten ö. Den är
+gjord av brons med en granitsockel, och i sin uppsträckta hand håller hon en symbol som på håll ser ut som
+ett äpple (facklan). På avstånd såg vi även den mäktiga Brooklynbron. Vi lade till vid Cunardlinjens egen pir,
+där alla rederier har sina egna stora magasin, och där fick vi vänta från klockan åtta på morgonen till fyra på
+eftermiddagen medan bagaget lastades av och tullkontrollen genomfördes. Tullvisitationen gick lika smidigt
+som i England och jag tror inte att någon behövde betala tull. Därifrån transporterades vi emigranter och vårt
+bagage med en mindre båt till Castle Garden-parken där man numera landstiger. Där möttes vi av en
+fruktansvärd trängsel och oreda. Vi var tvungna att uppge namn, ålder och yrke innan vi släpptes igenom. Det
+var ett enormt kaos av olika språk, skrik och rop. Det kändes väldigt jobbigt i början eftersom man inte visste
+vart man skulle ta vägen, och man var livrädd för att tappa bort sina saker eller sitt ressällskap. Man var
+också rädd för att råka ut för bedragare ("runners"), även om det fanns en sträng polisbevakning utanför
+portarna för att hålla obehöriga borta. Trots det såg jag flera sådana bedragare som hade lyckats ta sig in
+eller strök omkring utanför. Vid Castle Garden är det i stort sett omöjligt att klara sig på egen hand om man
+inte kan språket eller har sällskap som talar engelska. Vi klarade oss faktiskt bättre med språket i England än
+vad vi gör här i Amerika, eftersom uttalet är så annorlunda mot den engelska vi har lärt oss i Sverige.
+Skillnaden i talspråk är ungefär som mellan svenska och danska, även om skriftspråket är detsamma.
+Vi tog in på ett tyskt hotell alldeles i närheten av Castle Garden som kostade 1 dollar per dygn inklusive mat,
+vilket var mycket billigt. Vi delade tre personer på ett rum, och hotellägaren visade sig vara född i Sverige.
+Han var till stor hjälp för oss, även om vi var ganska misstänksamma mot honom i början. Det första vi gjorde
+efter att ha fått i oss ett mål varm mat vid ett ordentligt dukat bord var att ta ett bad, och det kändes helt
+fantastiskt att få bli en ren människa igen. Från Castle Garden telegraferade jag till mrs Uhlberg att jag hade
+anlänt, eftersom jag inte visste om jag skulle lyckas ta mig över till Brooklyn på egen hand. Hon kom till
+hotellet morgonen därpå, och vi tog då högbanan ("The elevated railway") till Central Park, som sägs vara det
+absolut finaste i New York. Där tittade vi på djurparkerna och promenerade längs de asfalterade gångarna.
+Det fanns en hel del djur i parken, men också mycket som saknades. Vi hann tyvärr inte med mer än så,
+eftersom vi var tvungna att ordna våra biljetter från New York till Kalifornien. Med hjälp av vår snälle
+hotellägare gick det över all förväntan; vi fick både billigare och bättre biljetter (för 50 dollar styck) än om vi
+hade bokat dem direkt i Göteborg. Dessutom gav det oss möjlighet att stanna till i både New York och
+Chicago. Vi ville gärna resa via Chicago för att få fortsätta resa tillsammans med en jämnårig före detta
+lantbrukare från Vänersborg vid namn Lönnerblad (vars far är kyrkoherde där och har sökt tjänst ihop med
+prosten Helander i Falköping), och naturligtvis för att få se staden Chicago. Medan de andra emigranterna
+tvingades resa vidare med de enkla emigranttågen samma dag som de kom till New York, kunde vi stanna
+kvar ett helt dygn och sova en natt i ordentliga sängar. Vi reste sedan med ett snabbt kurirtåg, vilket blev lika
+billigt och gick på den bästa linjen, så vi kom faktiskt fram till Chicago före de andra.
+Vi tillryggalade sträckan till Chicago (som ska vara runt 200 svenska mil) på 30 timmar, och resan var mycket
+bekväm. Här finns nämligen inga tredje klass-vagnar, utan bara första och andra klass, vilka är lika fina som
+första och andra klass i Sverige. Expresståget körde i en svindlande fart och vi passerade de stora sjöarna
+och Niagara. Vi åkte över en enorm bro över Niagarafloden, men tyvärr såg vi inte själva vattenfallen
+eftersom de låg lite längre uppströms. Vid ankomsten till Port Huron, som är den första staden på den
+kanadensiska sidan, genomgick vi en ny tullkontroll eftersom Kanada är brittiskt och inte tillhör USA. Men
+eftersom vi bara reste igenom med expresståget behövde vi inte betala någon tull. Vid Port Huron kördes
+hela tåget ombord på en stor flottbro för att fraktas över den breda floden, och på andra sidan fick vi byta tåg.
+Då hände det sig att andra klass-vagnarna blev fulla innan vi hann få plats, så vi fick det stora nöjet att åka i
+första klass resten av vägen till Chicago! Men det var en ganska kaotisk situation när vi skulle byta tåg; vi fick
+veta det i absolut sista sekund och hade vid det laget packat upp de flesta av våra saker i kupén – tofflor,
+filtar, flaskor och andra småsaker låg utspridda. Det blev en väldig stress att i all hast få med sig allt till det
+nya tåget. En vattenkanna i bleck blev vi tvungna att lämna kvar på tåget. Vi såg förmodligen ganska roliga ut
+när vi klev fram i middagshettan klädda i tjocka vinterytterrockar, med mina stora tofflor stickande ut ur den
+ena fickan och en ölflaska ur den andra, samtidigt som vi bar famnen full av nattsäckar, resväskor, filtar,
+paraplyer, borstar, böcker och brödknyten. För att göra det hela ännu mer tragi-komiskt lossnade botten på
+min hattask, och jag trodde att jag skulle tappa alltihop på marken. Men när vi väl kom till rätta i första klass,
+där vi hade tillgång till friskt tvättvatten och alla bekvämligheter, kände vi oss mycket nöjda. Tåget hade bara
+fem vagnar, men varje vagn var tre gånger så lång som en vanlig svensk tågvagn, med en mittgång och röda
+stoppade säten. Ryggstöden går att fälla över så att man kan sitta mitt emot varandra om man är ett sällskap,
+eller sträcka ut sig och sova om det finns gott om plats.
+Den amerikanska landsbygden ser väldigt speciell ut. Eftersom landet tidigare helt har bestått av djupa
+skogar, står trädstubbarna kvar överallt – till och med mitt ute på åkrarna. Stubbarna är oftast helt svarta,
+vilket beror på att man har bränt ner skogen för att kunna odla marken. Tåget kör därför genom långa
+områden som bara består av brända, halvbrutna träd och svarta stubbar i fuktiga våtmarker. I de mindre
+landsortsstäderna och ute på landsbygden finns det inte längre kvar något av den ordning och renlighet som
+man är van vid i Sverige eller England. Allt ligger huller om buller; vagnar, plogar, skräp och avfall ligger slängt
+utanför dörrarna, trapporna och fönstren. Man är inte så noga med sådant här. Det ser likadant ut vid
+järnvägsstationerna. Landsbygden i de östliga staterna var ganska ful, men den blev betydligt vackrare när vi
+kom in i Kanada och närmade oss Chicago.
+Här i Chicago har vi tagit in på ett helt okej hotell för 1,50 dollar per dygn, och maten för alla tre måltider
+kostar 2 dollar. Vi tycker att Chicago är en mycket trevlig stad, betydligt trevligare än New York. Idag har vi
+haft möjlighet att prata både engelska, tyska, franska och svenska på gatorna. Nu till en annan sak: eftersom
+våra tågbiljetter härifrån till Los Angeles är giltiga i ett helt år om vi så vill, har vi funderat på att stanna här i
+Chicago i några dagar. Vi tänker att det kan vara smart att försöka hitta något jobb här till en början. Det är
+lättare att lära sig språket här och ta sig fram eftersom det finns så otroligt mycket svenskar här, jämfört med
+om vi skulle åka direkt till Kalifornien. Om vi åker till Kalifornien direkt och det inte går bra där, kanske vi
+ångrar att vi inte gav Chicago en chans först, där vi ändå kan stanna en längre tid och sedan resa vidare.
+Därför blir vi nog kvar här i några dagar för att söka jobb, och hittar vi något stannar vi kanske ännu längre.
+Skulle det inte gå vägen reser vi vidare direkt.`
+      },
+      {
+        typ: 'avslutning',
+        innehall: `Jag ska därför hälsa på hos pastor Björk på Whiting Street 10 här i Chicago. Om ni skriver till mig, kan ni
+adressera breven dit. Om jag inte skulle vara kvar tar han hand om breven och skickar dem vidare till mig.
+Kanske har ni redan skickat brev till Los Angeles? I så fall är det nog bäst att ni väntar med att skriva mer tills
+ni får nästa brev från mig så att vi vet var jag hamnar. Arvid hinner tyvärr inte skriva själv, men han ber er att
+ringa till Alm och Bärsta och hälsa att vi har kommit fram så här långt på resan, och jag hälsar detsamma.
+Hälsa så gott till familjen Helander, Sundbergs och Sahlins. De som vill får gärna läsa det här brevet, men be
+dem ha överseende med att det är lite slarvigt skrivet på grund av brådskan och den långa texten.
+De varmaste hälsningar till er och syskonen från er tillgivne son,
+D.`
+      }
+    ]
+  },
+
+  en: {
+    title: 'Chicago, May 1, 1890',
+    intro: "I am now writing from Chicago, where we arrived last night at one o'clock. I tell of the long journey — from mattress chaos in Gothenburg to storms on the Atlantic and a tragi-comic train transfer in Port Huron.",
+    summary: [
+      {
+        title: 'Ticket Purchases and Equipment in Gothenburg',
+        text: "The author and his companion Arvid purchased third-class tickets to New York via the Cunard Line for 80 kronor, deliberately choosing to face the journey's hardships head-on. They bought mattresses and mess kits, but faced early logistical trouble as some utensils vanished before departure."
+      },
+      {
+        title: 'Mattress Chaos and Lost Belongs',
+        text: 'The purchased mattresses proved to be more trouble than they were worth, ruining clothes and ultimately being stolen or lost along with the tin mess kits during the chaotic transfer to the Atlantic liner S/S Aurania. This forced them to borrow utensils or eat off paper during the voyage.'
+      },
+      {
+        title: 'The Dramatic Atlantic Crossing',
+        text: 'The voyage took nine days due to severe weather. A violent storm struck the ship, causing widespread seasickness among the 1,100 passengers and crew. Miraculously, the author and Arvid remained entirely unaffected. The journey was also marked by freezing temperatures, encounters with icebergs near the Newfoundland Banks, and a day-long dense fog.'
+      },
+      {
+        title: 'Arrival in New York and Castle Garden',
+        text: 'Before anchoring, a spectacular thunderstorm broke out in the thick fog. Following a health inspection (smallpox screening/vaccination), they faced immense linguistic and logistical chaos at the Castle Garden emigrant station. They stayed at a cheap German hotel run by a Swedish-born owner who helped them secure highly advantageous train tickets westward.'
+      },
+      {
+        title: 'Train Journey to Chicago and a Tragi-Comic Transfer',
+        text: 'They traveled by express train via Canada, passing the Niagara River. During a sudden, last-second train transfer in Port Huron, they had to rush frantically to another train in the midday heat, dressed in winter overcoats and carrying arms full of loose belongings like slippers and beer bottles. As compensation, they were upgraded to first class for the remainder of the trip to Chicago.'
+      },
+      {
+        title: 'Future Plans in the Swedish Hub of Chicago',
+        text: 'The author was struck by the strange, scorched appearance of the American countryside and the general lack of cleanliness in country towns. Arriving in Chicago, they found it much more pleasant than New York. Since their train tickets to Los Angeles are valid for a full year, they are now considering staying in Chicago for some time to find work and learn the language before continuing to California.'
+      }
+    ],
+    sections: [
+      {
+        type: 'text',
+        content: `Dear Parents,
+My last letter to you was from Liverpool, but now I am writing from Chicago, where we arrived last night at one
+o'clock. I simply did not have the time to write while in New York. I hope that through the Cunard Line agent in
+Gothenburg you received word that our ship arrived safely in New York. Since I forgot to mention a great
+many things about the earlier part of the journey when I wrote from Liverpool, I would like to backtrack a bit in
+time.
+The day before we left Gothenburg, we ran around to all sorts of agents to find the line and vessel that would
+suit us best, and we finally decided on the Cunard Line. To keep our hands as free as possible upon arrival in
+New York, and to avoid the risk of being herded back and forth like cattle or ending up at some terrible
+emigrant hotel, we purchased tickets only as far as New York. They cost 80 kronor per person in third class.
+We were advised in Gothenburg to buy an upgrade to second class for the journey between Gothenburg and
+Hull, but we ignored that because we had decided from the start to face the hardships of the journey head-on.
+At the emigrant office, we bought mattresses for 1.25 kronor each, mess kits for 75 öre, and a knife, fork, and
+rope to bind our trunks. However, when we boarded at the last minute, it turned out we had only received a
+mess kit for one of us; the others were nowhere to be found. They were presumably taken by someone else,
+or the agent had forgotten to pack them.
+Later, we deeply regretted buying mattresses in Gothenburg instead of simply bringing an extra blanket each.
+The mattresses caused us a great deal of trouble and annoyance and were of very little use. First of all, they
+ruined our clothes terribly when we were forced to lie on them or carry them around, and in the end, they were
+taken away from us anyway when we boarded the large Atlantic steamship. We did not particularly mourn
+their loss, but we were annoyed by all the trouble they had caused us. We had far too many pieces of luggage
+to keep track of, and their number and weight forced out many drops of sweat, as we often had to carry them
+long distances, heavily dressed as we were.
+I have already written about the journey across the North Sea. Hull was a very unpleasant, coal-smoky city.
+However, the contrast regarding neatness, order, and cleanliness was immense between the English
+countryside and the city. It was the first thing that caught our eye when we boarded the train to Liverpool
+immediately after arriving in Hull. The entire countryside looked like a beautiful garden. It felt perhaps a bit too
+rigid with its perfectly straight paths, rows of trees, and hedges, but it was highly impressive nonetheless. One
+thing that astonished me greatly was the total lack of telephones; it seems that in England, telephones are
+viewed as superfluous luxury items. Fortunately, we only had to stay in Liverpool for a single day, whereas
+many others had been waiting there for an entire week for a ship. About 400–500 Scandinavians were
+gathered at the emigrant hotel in Liverpool. All of their lighter luggage, except for what they absolutely did not
+want to risk breaking and therefore carried themselves, was loaded at four o'clock in the morning on April 18
+onto two enormous wagons drawn by two gigantic horses. The entire crowd of emigrants then set out on foot
+for the two-mile walk to the harbor.
+Upon reaching the harbor, we boarded a smaller paddle steamer that was to take us out to the Atlantic liner
+anchored in the river. Before we got on board, however, we had quite a strenuous but memorable time
+carrying our heavy luggage from the baggage wagons through a long, steeply sloping tunnel down to the
+quay in a massive crowd. You can imagine the "pleasure" we had with our dusty, lint-covered mattresses in
+that crush! We brushed and brushed, but we were always just as dusty. Furthermore, it was very difficult to
+get both washing water and dishwater on board both the North Sea boat and the Atlantic ship. No matter how
+often we tried to wash, we always felt dirty due to all the grease and soot on board. But so far, we have tried
+to take everything from its humorous side—cursing one moment and laughing out loud the next.
+When the paddle steamer came alongside the large Atlantic vessel, the S/S Aurania, we once again had to
+hoist all our coats, overnight bags, baskets, bundles of food, hatboxes, blankets, and—of course—those
+mattresses onto our backs. Since we could not carry everything at once down the steep stairs to the ship's
+lower decks, we had to leave some items on deck and make two trips. It was during this time that our
+mattresses, along with the tin mess kits tied to them, disappeared. The mattresses and kits looked identical
+for everyone, so it was completely impossible to find them again after the ropes had been cut. We were not
+the only ones who lost their mattresses, and we did not miss them particularly much, but losing the mess kits
+was worse. Now we had to borrow from others or eat off paper instead of plates.
+On the Aurania, all the men were gathered forward, while the unmarried women and families were placed aft.
+In each cabin, there were four rows of bunks, two upper and two lower, with a narrow aisle down the middle.
+Each row had six sleeping spaces, meaning there was room for 24 people in each cabin. However, there
+were only 22 in ours, but it was incredibly cramped nonetheless. I will not say much about the food; it was
+partly quite good, and we supplemented the rest with our own packed provisions. It was only the manner of
+eating that was less than pleasant, due to a great lack of proper utensils and dishwater.
+The first day we had a very pleasant voyage across the Irish Sea and arrived during the night of Sunday, April
+20, at Queenstown, Ireland. There, the ship anchored to take on new passengers and fresh drinking water.
+The town was beautifully situated on a sloping shore inside a bay. This part of the island certainly seemed to
+justify the name "the Green Isle" with its bright greenery, though there seemed to be a lack of trees and
+shaded places. Unfortunately, we were not allowed to go ashore and had to settle for watching from the ship.
+In Queenstown, the number of emigrants increased by about 400–500 Irishmen, bringing the total number of
+passengers (including first and second class) to 1,100 people, in addition to a crew of 300—making a total of
+1,400 people on board. While we lay at anchor, a lively trade took place along the sides of the ship with
+oranges for 8 öre each, lemons, tobacco, and clothing. At the same time, two ships from other lines were
+there for the same purpose and departed at the same time as we did. One ship had more horsepower than
+ours but a blunter bow, so it did not arrive in New York before us; the third ship arrived much later.
+The very day after we left Ireland, we encountered a fierce headwind that intensified the further we went. One
+night we hit a full storm, and nearly all the emigrants became seasick. They screamed and wailed so much
+that it was truly miserable to hear. It was not particularly pleasant to lie in the cabin, feeling the violent rolling
+and seeing all the misery around you. It was the same up on deck during the day. But imagine—neither I nor
+Arvid felt the slightest bit of seasickness this time either! I believe only about 10 to 15 people out of the 1,100
+passengers escaped it entirely, and we even saw many of the sailors get sick. The ship's pitching, when the
+bow dove deep down and the stern lifted so that the propeller spun in the empty air, was terribly unpleasant,
+especially when one had to be below deck at night. Even though the ship was so large, the waves crashed
+over the 40-foot-high bow, pouring across the deck and down through the hatches. The weather was
+extremely unstable throughout the voyage, and when we passed the Newfoundland Banks, we encountered
+icebergs in the Gulf Stream. At night, we were sometimes forced to go at half speed or stop completely.
+Furthermore, the air was so cold that we froze terribly in our berths, as the hatches to the upper deck were
+mostly kept open for the sake of ventilation.
+The most unpleasant part of the voyage was the poor Irish emigrants we were forced to crowd with on deck.
+They are described as dirty and rowdy, spreading out everywhere right in the middle of the filth. The contrast
+with our Swedish girls was enormous; the Swedish girls were clean, neat, healthy, and strong, while the poor
+Irishwomen were often dirty and unkempt with red or black stringy hair. However, as they neared New York,
+they "changed skins"—right in the midst of all the emigrants, they brought out their finest clothes and dressed
+up elegantly.
+When we were about a day's journey from New York, we ran into a thick fog that lasted for over 24 hours. It
+was impossible to see more than 30 fathoms ahead. The steamer was forced to blow its horn around the
+clock at intervals of just two minutes, and the closer we got to the entrance of New York, the slower we went
+to avoid collisions. In addition, the ship cast powerful electric searchlights that illuminated everything as if it
+were the middle of broad daylight. Because of the fog, we could not find the pilot boat that was out to meet us,
+so we had to glide forward extremely slowly for two days. The last night before we anchored in New York, we
+witnessed a fantastic spectacle when a violent thunderstorm broke out with sharp lightning and enormous
+thunderclaps. Due to the dense fog, the ship's lights illuminated the mist while the lightning flashed from the
+sky, leaving us completely blinded before everything went pitch black again. At the same time, it poured with
+rain. The thunderstorm lasted for about two hours before the fog finally began to lift. We went to bed at one
+o'clock in the morning, and on the morning of April 28, we finally anchored in New York. Due to the severe
+weather, the journey took nine days instead of the normal seven, even though we traveled on one of the
+fastest ocean liners. One evening during the voyage, a concert was organized in the first-class saloon with
+free admission for everyone, and I went there. Arvid was below deck and unfortunately missed it. It was the
+first-class passengers who performed, and it was very pleasant, even though I did not understand much of the
+English lyrics, but the music was beautiful to listen to.
+A voluntary collection was taken up during the concert, though I do not remember for what purpose. The
+same morning we landed in New York, we had to undergo a medical examination on our arms to check if we
+were vaccinated against smallpox. Those who did not have clear scars had their arms scratched and were
+vaccinated on the spot. The approach to New York is very beautiful, much more beautiful than the city itself,
+which feels rather ugly and monotonous with its heavy rows of buildings and lack of parks and greenery. The
+grass is green here, but the trees have not budded yet. The climate is much like Sweden; the summers are
+warmer, but the winters are often colder. I have not seen any great floral display here in the eastern states
+yet; the only things I have noticed are willow, dandelions, and a few blossoming fruit trees. It seems that
+spring has progressed further back home in Sweden. The time difference is eight hours behind Swedish time.
+At the entrance to New York, with Brooklyn on one side, New Jersey on the other, and New York itself with the
+emigrant station Castle Garden on the third, the enormous Statue of Liberty stands on its own small island. It
+is made of bronze with a granite base, and in her raised hand, she holds a symbol that from a distance looks
+like an apple (the torch). From a distance, we also saw the mighty Brooklyn Bridge. We docked at the Cunard
+Line's own pier, where all lines have their own large warehouses, and there we had to wait from eight o'clock
+in the morning until four in the afternoon while the luggage was unloaded and the customs inspection took
+place. The customs check went as smoothly as in England, and I do not think anyone had to pay duty. From
+there, we emigrants and our luggage were transported by a smaller boat to the Castle Garden park where
+passengers now disembark. There we were met by terrible crowding and confusion. We had to give our
+name, age, and occupation before being let through. It was a massive chaos of different languages, shouting,
+and noise. It felt very overwhelming at first because you did not know where to go, and you were terrified of
+losing your things or your travel companions. One was also afraid of running into swindlers ("runners"), even
+though there was strict police guard outside the gates to keep unauthorized people away. Despite this, I saw
+several such swindlers who had managed to get inside or were loitering outside. At Castle Garden, it is
+virtually impossible to manage on your own unless you know the language or have companions who speak
+English. We actually managed better with the language in England than we do here in America, because the
+pronunciation is so different from the English we learned in Sweden. The difference in spoken language is
+much like that between Swedish and Danish, even though the written language is the same.
+We stayed at a German hotel right near Castle Garden which cost 1 dollar per day including meals, which
+was very cheap. Three of us shared a room, and the hotel owner turned out to be born in Sweden. He was of
+great help to us, even though we were quite suspicious of him at first. The first thing we did after getting a hot
+meal at a properly set table was to take a bath, and it felt absolutely fantastic to feel like a clean human being
+again. From Castle Garden, I telegraphed Mrs. Uhlberg to let her know I had arrived, as I did not know if I
+could manage to find my way over to Brooklyn on my own. She came to the hotel the following morning, and
+we then took the elevated railway ("The elevated railway") to Central Park, which is said to be the absolute
+highlight of New York. There we looked at the menageries and walked along the paved paths.
+There were many animals in the park, but also much that was missing. Unfortunately, we did not have time for
+more than that, as we had to arrange our train tickets from New York to California. With the help of our kind
+hotel owner, it went beyond all expectations; we got both cheaper and better tickets ($50 each) than if we had
+booked them directly in Gothenburg. Furthermore, it allowed us to stop over in both New York and Chicago.
+We very much wanted to travel via Chicago to continue traveling with a former farmer of our own age from
+Vänersborg named Lönnerblad (whose father is a clergyman there and has applied for a position alongside
+Dean Helander in Falköping), and naturally to see the city of Chicago. While the other emigrants were forced
+to travel onward on the simple emigrant trains the same day they came to New York, we were able to stay for
+a full day and sleep a night in proper beds. We then traveled by a fast express train, which was just as cheap
+and went on the best line, so we actually arrived in Chicago ahead of the others.
+We covered the distance to Chicago (said to be around 200 Swedish miles) in 30 hours, and the journey was
+very comfortable. There are no third-class carriages here, only first and second class, which are just as nice
+as first and second class in Sweden. The express train traveled at a dizzying speed, and we passed the Great
+Lakes and Niagara. We crossed an immense bridge over the Niagara River, but unfortunately, we did not see
+the falls themselves as they lay a bit further upstream. Upon arrival at Port Huron, which is the first town on
+the Canadian side, we underwent another customs check because Canada is British and does not belong to
+the USA. But since we were just traveling through on the express train, we did not have to pay duty. At Port
+Huron, the entire train was run onto a large train ferry bridge to be carried across the wide river, and on the
+other side, we had to change trains.
+It then happened that the second-class carriages became full before we could get seats, so we had the great
+pleasure of riding in first class for the rest of the way to Chicago! But it was a rather chaotic situation when we
+had to change trains; we were told at the absolute last second, and by then we had unpacked most of our
+things in the compartment—slippers, blankets, bottles, and other small items were scattered about. It became
+a huge rush to get everything into the new train in a hurry. A tin water pitcher had to be left behind on the train.
+We must have looked quite funny stepping forward in the midday heat dressed in thick winter overcoats, with
+my large slippers sticking out of one pocket and a beer bottle out of the other, while carrying our arms full of
+overnight bags, suitcases, blankets, umbrellas, brushes, books, and bundles of bread. To make it all even
+more tragi-comic, the bottom of my hatbox came loose, and I thought I would drop everything on the ground.
+But once we settled into first class, where we had access to fresh washing water and all amenities, we felt
+very satisfied. The train had only five carriages, but each carriage was three times as long as a normal
+Swedish train carriage, with a center aisle and red upholstered seats. The backrests can be flipped over so
+that you can sit facing each other if you are a group, or stretch out and sleep if there is plenty of room.
+The American countryside looks very peculiar. Since the country previously consisted entirely of deep forests,
+the tree stumps remain everywhere—even right out in the fields. The stumps are usually completely black,
+which is because the forest was burned down to clear the land for cultivation. The train therefore travels
+through long areas consisting only of burned, half-broken trees and black stumps in wet marshlands. In the
+smaller country towns and out in the countryside, nothing remains of the neatness and orderliness one is
+used to in Sweden or England. Everything lies topsy-turvy; wagons, plows, junk, and waste lie dumped
+outside doors, stairs, and windows. People are not so particular about such things here. It looks the same at
+the railway stations. The countryside in the eastern states was rather ugly, but it became significantly more
+beautiful as we entered Canada and approached Chicago.
+Here in Chicago, we have checked into a perfectly fine hotel for $1.50 a day, and the meals for all three
+courses cost $2. We think Chicago is a very pleasant city, much nicer than New York. Today we have had the
+opportunity to speak English, German, French, and Swedish on the streets. Now to another matter: since our
+train tickets from here to Los Angeles are valid for a whole year if we wish, we have been thinking about
+staying here in Chicago for a few days. We think it might be smart to try to find some work here at first. It is
+easier to learn the language here and get ahead because there are so incredibly many Swedes here,
+compared to if we went straight to California. If we go to California directly and things do not go well there, we
+might regret not giving Chicago a chance first, where we can stay for a longer time and then travel onward.
+Therefore, we will probably stay here for a few days to try for jobs, and if we find something, we might stay
+even longer. Should it not work out, we will move on immediately.`
+      },
+      {
+        type: 'closing',
+        content: `I will therefore pay a visit to Pastor Björk at 10 Whiting Street here in Chicago. If you write to me, you can
+address the letters there. If I am no longer here, he will take care of the letters and forward them to me.
+Perhaps you have already sent letters to Los Angeles? In that case, it is probably best that you wait to write
+more until you get the next letter from me so we know where I end up. Arvid does not have time to write
+himself, but he asks you to call Alm and Bärsta and say that we have made it this far on our journey, and I
+send the same regards. Give my best to the Helander family, the Sundbergs, and the Sahlins. Anyone who
+wants to is welcome to read this letter, but please ask them to overlook that it is a bit sloppily written due to
+the rush and the long text.
+Warmest greetings to you and my siblings from your affectionate son,
+D.`
+      }
+    ]
+  },
+
+  original: `Insänt av fru Margit Otterberg
+Klaraborgsgat. 8
+Karlstad
+1.
+Chicago d. 1. Maj 1890
+Dyra föräldrar!
+Sist jag skref var det från Liverpool, nu blir det från Chicago, dit vi anlände i natt kl. 1. I New York hann jag ej.
+Hoppas Ni genom Cunard-liniens agent i Gtbg fått underrättelse om, att den båt, vi medföljde, lyckligt anlände till
+New York. Eftersom jag, då jag skref från Liverpool, glömde åtskilligt, som jag velat skrifva om från denna förra
+del af färden, återgår jag något i tiden. Dagen innan vi lemnade Gtbg, voro vi ute och sprungo hos alla möjliga
+agenter för att tillförsäkra oss den linie och lägenhet, som bäst skulle passa och stannade vi då för Cunardlinien. För
+att vid ankomsten till N.York hafva så mycket som möjligt fria händer och ej riskera blifva skjutsade hit och dit
+som boskap eller till dåliga emigranthotell, löste vi biljett blott till New York med 80 kr för hvar i 3. klass. Man
+rådde oss visserligen i Gtbg att, när vi kommo ombord på Nordsjöbåten, lösa mellangiften till 2 klass mellan Gtbg
+– Hull, men deröfver reflekterade vi just ingenting, emedan vi fr. början beslutat träda det värsta in på lifvet. På
+emigrantkontoret fingo vi köpa madrass för 1.25 st. samt matkärl å 75 öre och knif och gaffel samt omslagsrep till
+våra reskoffertar. Men vid ankomsten ombord i sista stund före båtens afgång hade vi ändå fått blott den enes
+matkärl; de andra stodo ej att finna: de behöfdes förmodligen af ngra andra eller hade agenten ej tagit dem med.
+Sedermera ångrade vi mycket, att vi ej, i stället för att köpa madrasser i Gtbg, haft med ytterligare hvar sin filt; ty
+dessa madrasser hade vi mycket besvär och förargelse och föga eller ingen nytta af; ty för det första ställde de till
+kläderna ohyggligt, då man tvingades ligga på dem eller bära dem, och till sist blefvo äfven de oss fråntagna vid
+ombordgåendet å Atlanterångaren, utan att vi egentligen sörjde förlusten, blott förargade oss öfver det myckna
+besvär vi haft af dem; ty vi hade för många kolly att hålla reda på, och såväl för deras antal som tyngd
+frampressade de många svettdroppar, då vi ofta måste bära dem långa vägar och dertill voro tjockt klädda. Om
+resan öfver Nordsjön har jag förut skrifvit. Hull var en mycket otreflig, stenkolsrökig stad. Men så var kontrasten,
+hvad beträffar snygghet och ordning och renlighet, ganska stor mellan land och stad i England. Det var det första
+som föll i ögat, då vi strax efter framkomsten till Hull satte oss på tåget till Liverpool. Hela landsbygden var som en
+trädgård, kanske något för stel genom alla gångars, trädraders och häckars räthet, men anslående ändock. En sak
+som jag ej kunde nog förvåna mig öfver, var den totala bristen på telefoner. Detta tycks man i England betrakta som
+öfverflödiga lyxartiklar. I Liverpool behöfde vi ej ligga öfver mer än en dag, under det att en stor mängd legat der
+och väntat på lägenhet att afresa en hel vecka. På emigranthotellet i Liverpool voro ungefär 400 – 500 skandinaver
+samlade. Alla dessas lättare reseffekter, undantagandes sådant som man ej ville hafva sönderklämdt och derför bar
+sjelf, lastades vid afresan fr. L.-l. kl. 4 på morgonen d. 18 April på endast tvenne väldiga vagnar, dragna af endast
+tvenne sådana der kolossala hästar, och färden anträddes af emigrantskaran till fots den
+2.
+2 eng. mil långa vägen till hamnen, der vi hade att bestiga en mindre hjul-båt, som skulle föra oss öfver till
+Atlanterbåten på strömmen. Men innan vi väl voro ombord på den mindre båten, hade vi åter en rolig passage med
+våra många kolly från bagagevagnarna genom en lång, starkt nedförsluttande tunnel till kajen och derefter ombord,
+allt under stor trängsel. Och att vi dervid hade mycket nöje af våra dammiga, luddiga madrasser är sjelfsagdt! Vi
+borstade och borstade ständigt och jemt, och ändå voro vi alltid lika — oborstade. Hvartill kom att vi såväl på
+Nordsjö- som Atlanterbåten hade svårt att komma öfver tvättvatten och — diskvatten till våra matkärl. Och huru
+ofta vi för öfrigt tvättade oss, voro vi ändock alltid lika otvättade, allt för flottigheten och sotet ombord. Men vi ha
+allt hitintills tagit saken från dess komiska sida: rasat den ena stunden och skrattat godt den andra. När hjulbåten
+lade till invid Atlanterbåten, Aurania, hade vi åter att knoga på våra kapp- och nattsäckar, korgar, matknyten,
+hattaskar och filtar och äfven — de kära madrasserna. Men som vi dervid ej kunde bära allt på en gång nedför de
+branta trapporna till fartygets undre regioner, måste vi lemna qvar en del ofvan däck och bära i två omgångar, och
+det var dervid, som — de kära madrasserna jemte de vid dem fastbundna återstående bleck-matkärlen af andra
+behöfdes och försvunno. Madrasser och bleckkärl voro lika för alla, och derför kunde vi ej ens försöka återfinna
+dem sedan repomslaget blifvit upplöst och borttaget. Vi voro ej heller de enda, som förlorade madrasserna, som vi
+dock ej saknade särdeles, men värre var det med förlusten af matkärlen, ty nu fingo vi låna oss fram eller äta på —
+papper i st.f. tallriker. På Aurania voro alla manliga individer samlade för öfver, ogifta qvinliga akteröfver äfven
+som familjer. I hvarje hytt 4 rader britsar, 2 öfver och två under med en smel genomgång i midten. I hvarje rad 6
+liggplatser; allt-så rum för 24. Dock voro vi blott 22 i vår, och var det synnerligen trångt ändå. Om maten säger jag
+intet: delvis var den ganska bra, och resten kompletterades genom våra matsäckar; endast sättet att äta var mindre
+behagligt, i följd af brist på ordentliga matkärl och tillräckliga sådana samt diskvatten. Första dagen en utmärkt
+angenäm resa öfver Irländska sjön och framkommo vi under natten till Sönd. d.20. till Queenstown på Irland, der
+båten lade för ankar, för att intaga nya passagerare, emigranter och nytt dricksvatten. Platsen midt inne i en bugt
+med staden i strandsluttningen och utanverk på ömse sidor var ganska vacker; och tycktes denna del af ön göra skäl
+för namnet på Irland: "gröna ön" för sin ljusa grönska, men tycktes i stället ega brist på träd och skuggiga platser.
+Vi fingo un-der tiden ej gå i land, blott se från fartyget. I Queenstown blef emigrantstalet tillökadt med omkr. 400 -
+500 Irländare, och uppgick nu passagerareantalet (inräknat 1:a 2: klass passagerare) till 1100 utom 300 mans
+besättning, inalles 1400. Under tiden vi lågo i Queenstown öppnades längs fartygets si-dor en liflig handel med
+apelsiner å 8 öre st., citroner, to-bak och diverse klädespersedlar. Samtidigt med oss lågo i Queenstown 2:ne andra
+liniers båtar i samma ändamål som vi och afgingo äfven samtidigt derifrån. Af dessa hade den ena större antal
+hästkrafter än vår, men trubbivare för, och framkom derför ej förr än vår båt till New York; den tredje först långt
+senare. Redan första dagen derpå följande dag från Irland bör-
+3.
+jade vi få hård motvind, som tilltog, ju längre vi kommo, och hade vi en natt full storm, hvarunder snart sagdt alla
+emigranter voro sjösjuka och skreko och tjöto, så det var ynkligt höra derpå. Icke heller just behagligt att ligga i
+hytten och känna de obehagliga rullningarna samt höra och se eländet öfver, under och omkring sig. Äfven om
+dagarna uppe på däck var det likadant. Men tänk! Jag hade ej heller nu minsta känning af sjösjuka och knappast
+Arvid heller. Jag tror så var förhållandet med blott en 10 å 15 st. af dessa 1100 och sågo vi äfven många af
+sjömännen sjuka. Men krängningarna, då båten dök ned med fören och upp med aktern, så att propellern snurrade i
+luften voro förfärligt obehagliga, synnerligast när man nattetid måste vara under däck. Och fastän båten var en
+sådan stor klass, slogo sjöarna öfver den circa 40 fot höga förstäfven ned på däck; derpå, när aktern lyftes upp,
+tillbaka till fören och ned genom luckorna. Så der ostadigt var vädret under hela resan, och när vi passerade "The
+banks" — New Foundlandsbankarna stötte vi på isberg i golfströmmen och fingo under natten ibland gå för half
+maskin, ibland ligga stilla. Tillika var luften der så kall, så vi fröso rysligt i våra bäddar, då luckorna till öfre däck
+för ventilationens skull mestadels voro öppna. Det obehagligaste under resan var det irländska traspacket, som man
+måste trängas med på däck. Snuskiga, trasgranna och ohyfsade sträckte de ut sig öfver allt på däck midt i bland all
+smuts. Huru stor var ej kontrasten mellan irländskorna och våra svenska flickor! — de senare snygga, rena, kraftiga
+och med ganska vacker ansigtstyp — irländskorna små, trasgranna, smutsiga, med rödt och svartblandadt hår och
+vanligen utstående framtänder. Men när de senare kommo till New York byta de om skinn, och midt ibland alla
+emigranter göra de stor toalett och utkluta sig gentilt. När vi voro på ungefär en dagsresas afstånd fr. New York
+fingo vi tjock dimma, som varade öfver ett dygn och ej tilllät oss se 30 fmr omkring oss. Då höll ångaren på och
+blåste dygnet om med blott 2 minuters mellanrum mellan hvarje hvissling och måste, ju närmare man kom inloppet
+till New York, gå allt saktare och saktare för att undvika sammanstötning. Dessutom kastade fartyget elektriska
+ljusknippen oupphörligt rundt ikring sig, hvaraf allting upplystes som vid ljusan dag. För dimmans skull kunde vi ej
+finna lotsbåten, som var ute för att möta, oaktadt de idkeliga, gälla hvisslingarna, och derför måste vi under två
+dygn glida så sakta fram. Men tänk vilket skådespel, då under sista natten innan vi ankrade i New York, ett starkt
+åskväder utbröt med skarpa blixtar och väldiga knallar. För den täta dimmens skull kastade fartyget sina blixtar, och
+skyn nedslungade sina; ibland inföllo de samtidigt, och ögat alldeles bländades för att genast efteråt befinna sig i
+ännu svartare mörker än förut. Allt härunder nedströmmade regnet. Åskvädret varade väl ej stort mer än 2 timmar,
+och derefter började också dimman något vika; vi gingo och lade oss kl. 1 på natten, och på morgonen d. 28.
+ankrade vi i New York. För det svåra vädret hade resan med en af de snabbaste oceanångarne varat hela 9 dygn och
+litet dertill i st.f. 7. En qväll under färden var det konsert i första klassens salong med fritt tillträde, och var jag då
+der. Arvid var förut under däck och viste ej deraf. Det var 1:sta klassens passagerare, som roade sig dermed. Det var
+mycket trefligt, ehuru jag af orden i sångnumren ganska litet begrep. Men örat hörde musiken
+4.
+så mycket mer. Frivillig kollekt upptogs, jag minns ej till hvad ändamål. Samma morgon vi landade i New York och
+dessförinnan, fingo vi undergå undersökning å armarne, om vi voro vaccinerade, och de, på hvilka märken efter
+dylikt ej skönjdes tydligt, fingo sina armar rispade. Det var några. Inloppet till New York är vackert, vackrare än
+staden, som är skäligen ful och enformig med sina tunga husrader, utan nämnvärd egentlig tillgång på parker och
+grönska. Här står gräset grönt, men ej träden, och klimatet är ungefär det samma som i Sverige; Somrarna äro
+varmare, men äfven vintrarne ofta kallare. Någon sådan blomsterrikedom som i Norden, har jag ej sett här i de östra
+staterna. Det enda jag tror jag sett i den vägen har varit sälg och maskrosor, samt ett och annat blommande
+fruktträd. Jag tror årstiden går före i Sverige, liksom den svenska tiden är 8 tmr före den amerikanska. Vid inloppet
+till New York, med stadsdelen Brooklyn på en sida, New Jersey city på en annan och sjelfva New York med Castle
+Garden, emigrantlandningsplatsen, på en tredje står upprest på en holme den kolossala frihetsstatyn med fot af
+granit, föreställande frihetens gudinna (af brons) hållande i sin höjda hand en symbol, jag tror ett äpple. På afstånd
+sågo vi den väldiga Brooklynbron, som sammanbinder denna stadsdel med New York. Vi lade till vid
+Cunardliniens landningsplats (hvarje linie har sin med derå uppförda stora magasin), och der fingo vi dröja från kl.
+8 på morgonen till 4 på aftonen, medan resgodset fraktades i land och tullvisitationen försiggick. Denna gick lika
+behändigt som i England; jag tror ej någon fick erlägga tull. Derifrån fraktades ånyo emigranter och resgods på en
+mindre båt till Castle Gardens park, der man numera lägger till. Der var förfärlig trängsel och oreda, och der måste
+vi uppgifva namn, ålder och yrke, innan vi sluppo igenom. En riktig språkbifvring, skrik och skrän. Värst derför att
+man till en början ej viste, hvart man skulle taga vägen och emedan man var rädd förlora saker och sitt ressällskap
+— rädd kanske äfven att råka ut för runnare och dylikt, ehuru utanför är rätt sträng polisbevakning för att ej från
+landsidan genom portarne obehöriga skola slippa in. Men ändå såg jag der åtskilliga exemplar af runnare, som
+lyckats komma in ellr höllo sig utanför. Vid Castle garden är det hardt när omöjligt reda sig, såvida man ej har ngn
+språkkännedom eller sällskap, som talar engelska. Vi redde oss bättre i England med språket der, än vi göra i
+Amerika, emedan uttalet är så olika och vi i Sverige naturl. lärt det engelska. Det är ungefär samma skillnad i
+talspråket som mellan svenska och danska, ehuru skriftspråket är det samma eller rättare, som mellan Norska och
+danska. Vi togo in på ett tyskt hotell strax invid Castle Garden för 1 dollar med mat för dygn (mycket billigt) och
+voro vi då 3 i rummet; men hotellegaren var född svensk. Han var oss sedan till god hjelp, ehuru vi i början voro
+temligen misstrogna. Det första vi sedan gjorde, efter att hafva fått ett mål varm mat vid dukadt bord, var att taga
+ett bad och kändes det skönt åter få bli ren menniska. Från Castle garden hade jag telegraferat till mrs Uhlberg, att
+jag anländt, så att hon skulle få veta det, ty jag viste ej, om jag kunde hinna eller hitta öfver till Brooklyn. Hon kom
+följande morgon, och satte vi oss då på "The elevated railway" och foro till Central Park, som skall vara det sevärda
+i New York. Der besågo vi menagerierna och promenerade en stund i gångarna, som alla voro cementerade.
+Visserligen fans
+5.
+det mycket i menagerierna, men också mycket, som ej fans jag menar ur djurverlden. Mera hunno vi ej, och jag tror
+ej det New York till California, och genom hotellvärdens bemedling gick det öfver all förväntan bra, så att vi fingo
+både billigare och bättre (för 50 dlrs), än om vi löst direkt fr. Gtbg, då vi dessutom väl knappast fått dröja något i
+New York, ännu mindre i Chicago, deröfver vi ville fara, dels för att få behålla sällskapet med en jemnårig f.d.
+landtbrukare i Sverige vid namn Lönnerblad fr. Wennersborg, der fadern är kyrkoherde, och en af prosten
+Helanders medsökande till Falköping, dels för att få se äfven denna stad. Då andra emigranter fingo gå med
+emigranttåg samma dag, de kommo till New York, dröjde vi öfver der ett helt dygn och fingo sofva öfver en natt i
+ordentliga sängar, och så foro vi med kurirtåg lika billigt och på den bästa linien och kommo ändå fram förr till
+Chicago. Vi tillryggalade denna vägsträcka (200 sv. mil tror jag) på 30 timmar och åkte tillika bekvämt, ty här
+finnas inga 3je klass vagnar, utan blott 1:sta och 2:dra, lika godas som samma 1:sta och 2:dra klass i Sverige.
+Expresståget gick med svindlande fart, och passerade vi de s.k. stora sjöarne samt Niagara. Men ehuru vi på en
+väldig bro passerade Niagarafloden, sågo vi dock ej fallen, som lågo litet längre upp. Vid ankomsten till Port
+Huron, första staden och stationen i Canada, skedde tullbehandling igen; ty Canada är engelskt och hör ej till
+Förenta staterna. Men som vi express reste igenom, behöfde vi ej tulla. Vid Port Huron fraktades tåget öfver den
+breda floden på en stor flottbro och på andra sidan skedde tågbyte. Då hände sig, att 2:dra klass vagnarna blefvo
+fulla innan vi fått plats, och fingo vi då det nöjet åka i första klass derifrån och till Chicago. Men lustigt var det, när
+vi skulle byta om tåg; vi viste ej deraf förr än i sista stund, och hade större delen af våra reseffekter upplösta och
+framtagna ss. tofflor, filtar, buteljer och andra småsaker, och det var stretigt att i en hast få allt detta med sig öfver
+till det andra tåget. En vattenkanna af bleck måste vi sätta i sticket och lemna. Vi togo oss roliga ut, då vi knogade
+fram i värmen midt på dagen, klädda i vinterytterrockar, jag med mina stora, tjockv tofflor uppstickande ur den ena
+fickan och en ölbutelj ur den andra, hållande i händerna eller, ännu bättre, i fånget diverse nattsäckar, kappsäckar,
+filtar, paraplyer, borstar, böcker, brödknyten m.m. småplock. Till råga på det tragi-komiska i situationen lossnade
+bottnen i min hattask, och jag trodde jag skulle tappa alltsammans. Men när vi sedan åkte i första klass och der
+hade tillgång till tvättvatten och alla till en toalett hörande artiklar, kände vi oss ganska belåtna. Tåget hade ej mer
+än 5 vagnar, hvarje 3 gånger så lång, som våra vanliga svenska med genomgång i midten och röda stoppade dynor.
+Ryggstöden kunna fällas öfver fr. ena sidan till den andra, så att man kan sitta midt emot hvarandra, om man är ett
+sällskap eller sträcka ut sig och sofva, om utrymmet i vagnen med afs. på passagerare det tillåter. Den amerikanska
+landsbygden är egendomlig på ett vis. Som skogen tycks hafva varit allenaherrskande i landet förr, så qvarstå
+öfverallt, till och med i åkrarne, stubbarne af träden, vanligen svarta, troligen derför att man börjat odlingen genom
+att afbränna skogen. Sålunda går tåget genom hela trakter, som blott bestå af dylik bråte halfafbrutna träd och
+svarta stubbar i sank mark.
+6.
+I landsortsstäderna, äfvensom på landet, gäller ej längre den engelska eller svenska snyggheten och prydligheten.
+Huller om buller kastadt ligga vagnar, plogar, skräp, afskräde och allt möjligt utanför dörren, trappen, fönstren; det
+är ej så noga. Likadant vid jernvägsstationerna. Ful var landsbygden i de östra staterna; något vackrare blef den i
+Canada och närmare Chicago. I Chicago togo vi in på ett medelmåttigt hotell för 1.50 dollars pr dygn; för alla tre
+måltiderna begärdes 2 dlrs. Denna stad finna vi treflig; vida mer än New York. Och idag hafva vi haft tillfälle röra
+oss med både engelska, tyska, franska och svenska språken. Nu kommer jag till en annan sak. Som våra biljetter
+härifrån till Los Angelos räcka, om vi vilja, ett helt år, hafva vi funderat på att stanna här några dagar tills vidare för
+att försöka om möjligt få någon plats här, der vi ha lättare lära oss språket och hjelpa oss fram bland så mycket
+svenskar, än om vi direkt ginge till Californien. Väl komna dit kanske vi skulle ångra, om det ej ginge bra der, att vi
+ej försökt i Chicago, då vi kunde dröja der en god tid och sedan fortsätta. Derför komma vi väl att stanna några
+dagar här för att försöka på, och om vi få några platser, ännu längre. I motsatt fall fortsätta vi genast. Jag skall
+derför göra besök hos Pastor Björk, adr. 10. Whiting str. Chicago, och om Ni skrifva, adressera då brefven dit.
+Skulle jag ej vara qvar här skall jag bedja honom returnera dem åt mig. Kanske Ni redan skrifvit till Los Angeles?
+Annars är väl bäst dröja, tills nästa bref fr. mig hinner anländda. Arvid A. beder Eder genom telefon underrätta i
+Alm och Bärsta, hur långt vi hunnit på vår resa och jag förenar mig. Helsa Helanders, Sbgs och Sahlins; de som
+vilja kunna ju få läsa detta, mot ord och lofven om välvilligt öfverseende med för af brådskan och brefvets längd
+och omständigheterna i öfrigt förorsakadt slarf.
+De varmaste helsningar till Eder och syskonen från Eder tillgifne son D.`,
+
+  scan1950: [
+    'PXL_20260604_185248585.jpg',
+    'PXL_20260604_185311421.jpg',
+    'PXL_20260604_185325399.jpg',
+    'PXL_20260604_185334241.jpg',
+    'PXL_20260604_185347449.jpg',
+    'PXL_20260604_185357407.jpg'
+  ],
+
+  pdf: {
+    sv: 'output_1890-05-01_modern_svenska.pdf',
+    en: 'output_1890-05-01_modern_engelska.pdf',
+    original: 'output_1890-05-01_original.pdf',
+    sammansv: 'output_1890-05-01_sammanfattning_svenska.pdf',
+    summen: 'output_1890-05-01_summary_english.pdf'
+  }
+};

@@ -134,6 +134,8 @@ function getBrevIndex(lang) {
 
 // ── Login logging ─────────────────────────────────────────────────────────────
 
+const minnesLoggar = [];
+
 function getIP(req) {
   const fwd = req.headers['x-forwarded-for'];
   if (fwd) return fwd.split(',')[0].trim();
@@ -141,62 +143,63 @@ function getIP(req) {
 }
 
 async function slaUppGeo(ip) {
-  if (ip === '::1' || ip === '127.0.0.1' || ip.startsWith('192.168.') || ip.startsWith('10.')) {
+  if (!ip || ip === '::1' || ip === '127.0.0.1' || ip.startsWith('192.168.') || ip.startsWith('10.') || ip.startsWith('::ffff:127.') || ip.startsWith('::ffff:192.168.')) {
     return 'lokal anslutning';
   }
   try {
     const ctrl = new AbortController();
-    const tid = setTimeout(() => ctrl.abort(), 3000);
+    const tid = setTimeout(() => ctrl.abort(), 4000);
     const svar = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,city,regionName`, { signal: ctrl.signal });
     clearTimeout(tid);
     const d = await svar.json();
     if (d.status === 'success') {
       return [d.city, d.regionName, d.country].filter(Boolean).join(', ');
     }
-  } catch {}
+  } catch (err) {
+    console.error('Geo-uppslag misslyckades:', err?.message);
+  }
   return 'okänd plats';
 }
 
-async function loggaInloggning(req, typ) {
+// Loggning körs asynkront efter svar skickats – gör geo-uppslag INNAN sparandet
+function loggaInloggning(req, typ) {
   const ip = getIP(req);
-  const entry = {
-    id: genId(),
-    typ,
-    ip,
-    datum: new Date().toISOString(),
-    geo: 'slår upp…'
-  };
+  const datum = new Date().toISOString();
+  const id = genId();
 
-  if (redis) {
-    await redis.lpush('login:loggar', JSON.stringify(entry));
-    await redis.ltrim('login:loggar', 0, 199);
-  }
-
-  // Geo-uppslag i bakgrunden – uppdatera entry
+  // Kör geo-uppslag och spara allt i ett steg (ingen lset-uppdatering behövs)
   slaUppGeo(ip).then(async (geo) => {
-    entry.geo = geo;
+    const entry = { id, typ, ip, datum, geo };
+    const rad = JSON.stringify(entry);
+
     if (redis) {
-      // Hämta listan, hitta och ersätt entry
-      const lista = await redis.lrange('login:loggar', 0, -1);
-      for (let i = 0; i < lista.length; i++) {
-        try {
-          const e = JSON.parse(lista[i]);
-          if (e.id === entry.id) {
-            await redis.lset('login:loggar', i, JSON.stringify({ ...e, geo }));
-            break;
-          }
-        } catch {}
+      try {
+        await redis.lpush('login:loggar', rad);
+        await redis.ltrim('login:loggar', 0, 199);
+      } catch (err) {
+        console.error('Redis logg-fel:', err?.message);
+        minnesLoggar.unshift(entry);
+        if (minnesLoggar.length > 200) minnesLoggar.pop();
       }
+    } else {
+      minnesLoggar.unshift(entry);
+      if (minnesLoggar.length > 200) minnesLoggar.pop();
     }
-  }).catch(() => {});
+  }).catch((err) => {
+    console.error('loggaInloggning fel:', err?.message);
+  });
 }
 
 async function hamtaLoggar() {
   if (redis) {
-    const lista = await redis.lrange('login:loggar', 0, -1);
-    return lista.map(r => { try { return JSON.parse(r); } catch { return null; } }).filter(Boolean);
+    try {
+      const lista = await redis.lrange('login:loggar', 0, -1);
+      return lista.map(r => { try { return JSON.parse(r); } catch { return null; } }).filter(Boolean);
+    } catch (err) {
+      console.error('hamtaLoggar fel:', err?.message);
+    }
   }
-  return [];
+  return minnesLoggar;
 }
 
 // ── Site auth routes ───────────────────────────────────────────────────────────
@@ -206,10 +209,10 @@ app.get('/login', (req, res) => {
   res.render('login', { fel: null });
 });
 
-app.post('/login', async (req, res) => {
+app.post('/login', (req, res) => {
   if (req.body.losenord === PASSWORD) {
     req.session.authenticated = true;
-    loggaInloggning(req, 'site').catch(() => {});
+    loggaInloggning(req, 'site');
     res.redirect('/');
   } else {
     res.render('login', { fel: 'Fel lösenord. Försök igen.' });
@@ -272,11 +275,11 @@ app.get('/admin/login', (req, res) => {
   res.render('admin-login', { fel: null });
 });
 
-app.post('/admin/login', async (req, res) => {
+app.post('/admin/login', (req, res) => {
   if (req.body.losenord === ADMIN_PASSWORD) {
     req.session.admin = true;
     req.session.authenticated = true;
-    loggaInloggning(req, 'admin').catch(() => {});
+    loggaInloggning(req, 'admin');
     res.redirect('/admin/gastbok');
   } else {
     res.render('admin-login', { fel: 'Fel lösenord.' });

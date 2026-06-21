@@ -150,6 +150,15 @@ main {
    INDEX – BREVLISTAN
 ============================================================ */
 
+.bakgrund-rubrik {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--brun);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--linje-ljus);
+}
+
 .bakgrund-panel {
   background: var(--papper);
   border: 1px solid var(--linje);

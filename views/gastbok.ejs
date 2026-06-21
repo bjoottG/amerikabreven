@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= lang === 'en' ? 'Guestbook' : 'Gästbok' %> – Amerikabreven</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1><a href="/?lang=<%= lang %>" class="header-lank">Amerikabreven</a></h1>
+      <p class="undertitel">
+        <% if (lang === 'en') { %>Letters and stories from those who sailed to America<% } else { %>Berättelser och brev från dem som reste till Amerika<% } %>
+      </p>
+      <nav>
+        <a href="/?lang=<%= lang %>"><%= lang === 'en' ? 'All letters' : 'Alla brev' %></a>
+        <a href="/gastbok?lang=<%= lang %>" class="aktiv-nav"><%= lang === 'en' ? 'Guestbook' : 'Gästbok' %></a>
+        <a href="/logout"><%= lang === 'en' ? 'Log out' : 'Logga ut' %></a>
+        <div class="lang-vaxlare">
+          <a href="/gastbok?lang=sv" class="lang-knapp<%= lang === 'sv' ? ' aktiv' : '' %>">SV</a>
+          <span class="lang-sep">|</span>
+          <a href="/gastbok?lang=en" class="lang-knapp<%= lang === 'en' ? ' aktiv' : '' %>">EN</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="gastbok-wrap">
+      <h2 class="gastbok-rubrik"><%= lang === 'en' ? 'Guestbook' : 'Gästbok' %></h2>
+      <p class="gastbok-intro">
+        <% if (lang === 'en') { %>
+          Have you found a relative among these letters? Do you have a memory to share? Write a few words here.
+        <% } else { %>
+          Känner du igen en släkting i breven? Har du ett minne att dela med dig av? Skriv några rader här.
+        <% } %>
+      </p>
+
+      <!-- Form -->
+      <div class="gastbok-formular">
+        <h3><%= lang === 'en' ? 'Leave a message' : 'Lämna ett inlägg' %></h3>
+
+        <% if (ok) { %>
+          <p class="gastbok-ok"><%= lang === 'en' ? 'Thank you for your message!' : 'Tack för ditt inlägg!' %></p>
+        <% } %>
+        <% if (fel) { %>
+          <p class="gastbok-fel"><%= fel %></p>
+        <% } %>
+
+        <form method="POST" action="/gastbok?lang=<%= lang %>">
+          <div class="form-rad">
+            <label for="namn"><%= lang === 'en' ? 'Name' : 'Namn' %> <span class="obligatorisk">*</span></label>
+            <input type="text" id="namn" name="namn" maxlength="100" required>
+          </div>
+          <div class="form-rad">
+            <label for="epost"><%= lang === 'en' ? 'Email (optional)' : 'E-post (valfritt)' %></label>
+            <input type="email" id="epost" name="epost" maxlength="200">
+          </div>
+          <div class="form-rad">
+            <label for="meddelande">
+              <%= lang === 'en' ? 'Message' : 'Meddelande' %> <span class="obligatorisk">*</span>
+              <span class="tecken-rakn" id="rakn">0/400</span>
+            </label>
+            <textarea id="meddelande" name="meddelande" maxlength="400" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="skicka-knapp">
+            <%= lang === 'en' ? 'Send' : 'Skicka' %>
+          </button>
+        </form>
+      </div>
+
+      <!-- Entries -->
+      <div class="gastbok-inlagg-lista">
+        <h3><%= lang === 'en' ? 'Messages' : 'Inlägg' %> (<%= inlagg.length %>)</h3>
+
+        <% if (inlagg.length === 0) { %>
+          <p class="gastbok-tom"><%= lang === 'en' ? 'No messages yet. Be the first!' : 'Inga inlägg ännu. Var den första!' %></p>
+        <% } %>
+
+        <% inlagg.forEach(e => { %>
+          <article class="gastbok-inlagg">
+            <div class="inlagg-header">
+              <span class="inlagg-namn"><%= e.namn %></span>
+              <span class="inlagg-datum">
+                <%= new Date(e.datum).toLocaleDateString(lang === 'en' ? 'en-SE' : 'sv-SE', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+              </span>
+            </div>
+            <% if (e.epost) { %>
+              <div class="inlagg-epost">&#9993; <%- obfusceraMejl(e.epost) %></div>
+            <% } %>
+            <div class="inlagg-text"><%- obfusceraMejl(e.meddelande.replace(/\n/g, '<br>')) %></div>
+          </article>
+        <% }) %>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Amerikabreven &mdash; <%= lang === 'en' ? 'an archive of memories and longing' : 'ett arkiv över minnen och längtan' %>
+  </footer>
+
+  <script>
+    const ta = document.getElementById('meddelande');
+    const rakn = document.getElementById('rakn');
+    ta.addEventListener('input', () => { rakn.textContent = ta.value.length + '/400'; });
+  </script>
+</body>
+</html>

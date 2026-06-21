@@ -14,7 +14,8 @@
         <% if (lang === 'en') { %>Letters and stories from those who sailed to America<% } else { %>Berättelser och brev från dem som reste till Amerika<% } %>
       </p>
       <nav>
-        <a href="/?lang=<%= lang %>"><%= lang === 'en' ? 'Letters' : 'Breven' %></a>
+        <a href="/?lang=<%= lang %>" class="aktiv-nav"><%= lang === 'en' ? 'Letters' : 'Breven' %></a>
+        <a href="/gastbok?lang=<%= lang %>"><%= lang === 'en' ? 'Guestbook' : 'Gästbok' %></a>
         <a href="/logout"><%= lang === 'en' ? 'Log out' : 'Logga ut' %></a>
         <div class="lang-vaxlare">
           <a href="/?lang=sv" class="lang-knapp<%= lang === 'sv' ? ' aktiv' : '' %>">SV</a>

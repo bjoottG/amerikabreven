@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – Gästbok – Amerikabreven</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1><a href="/" class="header-lank">Amerikabreven</a></h1>
+      <p class="undertitel">Administration – Gästbok</p>
+      <nav>
+        <a href="/">Breven</a>
+        <a href="/gastbok">Gästbok</a>
+        <a href="/admin/logout">Avsluta admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-wrap">
+      <h2>Moderera gästboken (<%= inlagg.length %> inlägg)</h2>
+
+      <% if (inlagg.length === 0) { %>
+        <p class="gastbok-tom">Inga inlägg ännu.</p>
+      <% } %>
+
+      <% inlagg.forEach(e => { %>
+        <div class="admin-inlagg <%= e.godkand ? '' : 'admin-dolt' %>">
+          <div class="admin-inlagg-meta">
+            <strong><%= e.namn %></strong>
+            <% if (e.epost) { %><span class="admin-epost"><%= e.epost %></span><% } %>
+            <span class="inlagg-datum"><%= new Date(e.datum).toLocaleString('sv-SE') %></span>
+            <span class="admin-status"><%= e.godkand ? '✓ Synlig' : '✗ Dold' %></span>
+          </div>
+          <div class="admin-inlagg-text"><%= e.meddelande %></div>
+          <div class="admin-knappar">
+            <form method="POST" action="/admin/gastbok/toggle/<%= e.id %>" style="display:inline">
+              <button type="submit" class="admin-knapp admin-knapp-toggle">
+                <%= e.godkand ? 'Dölj' : 'Visa' %>
+              </button>
+            </form>
+            <form method="POST" action="/admin/gastbok/delete/<%= e.id %>" style="display:inline"
+                  onsubmit="return confirm('Radera detta inlägg permanent?')">
+              <button type="submit" class="admin-knapp admin-knapp-delete">Radera</button>
+            </form>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Amerikabreven
+  </footer>
+</body>
+</html>

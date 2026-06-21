@@ -749,3 +749,282 @@ footer {
     height: 165px;
   }
 }
+
+/* ============================================================
+   GÄSTBOK
+============================================================ */
+
+.gastbok-wrap {
+  max-width: 760px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.gastbok-rubrik {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--brun);
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.gastbok-intro {
+  text-align: center;
+  color: var(--text-ljus);
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.gastbok-formular {
+  background: var(--papper);
+  border: 1px solid var(--linje);
+  padding: 1.6rem 2rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+}
+
+.gastbok-formular h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brun);
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--linje-ljus);
+  padding-bottom: 0.5rem;
+}
+
+.form-rad {
+  margin-bottom: 1rem;
+}
+
+.form-rad label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.92rem;
+  color: var(--text-ljus);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.obligatorisk {
+  color: var(--rodbrunt);
+}
+
+.tecken-rakn {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--text-ljus);
+  opacity: 0.7;
+}
+
+.form-rad input,
+.form-rad textarea {
+  width: 100%;
+  background: var(--papper-mork);
+  border: 1px solid var(--linje);
+  border-radius: 2px;
+  padding: 0.55rem 0.75rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: var(--text);
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.form-rad input:focus,
+.form-rad textarea:focus {
+  outline: none;
+  border-color: var(--brun-ljus);
+  background: var(--papper);
+}
+
+.skicka-knapp {
+  background: var(--brun);
+  color: var(--papper);
+  border: none;
+  padding: 0.6rem 1.8rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.2s;
+  margin-top: 0.4rem;
+}
+
+.skicka-knapp:hover {
+  background: var(--brun-ljus);
+}
+
+.gastbok-ok {
+  background: #e8f4ec;
+  border: 1px solid #a8d4b4;
+  color: #2d6e4a;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.gastbok-fel {
+  background: #faeaea;
+  border: 1px solid #e0aaaa;
+  color: var(--rodbrunt);
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.gastbok-inlagg-lista h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brun);
+  font-size: 1.25rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--linje-ljus);
+  padding-bottom: 0.5rem;
+}
+
+.gastbok-tom {
+  color: var(--text-ljus);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.gastbok-inlagg {
+  background: var(--papper);
+  border: 1px solid var(--linje);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.05);
+}
+
+.inlagg-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.inlagg-namn {
+  font-weight: 600;
+  color: var(--brun);
+  font-size: 1.05rem;
+}
+
+.inlagg-datum {
+  font-size: 0.85rem;
+  color: var(--text-ljus);
+  font-style: italic;
+}
+
+.inlagg-epost {
+  font-size: 0.85rem;
+  color: var(--text-ljus);
+  margin-bottom: 0.5rem;
+}
+
+.inlagg-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.aktiv-nav {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Admin ── */
+
+.admin-wrap {
+  max-width: 820px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.admin-wrap h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--brun);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--linje);
+  padding-bottom: 0.5rem;
+}
+
+.admin-inlagg {
+  background: var(--papper);
+  border: 1px solid var(--linje);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 6px rgba(0,0,0,0.05);
+}
+
+.admin-dolt {
+  opacity: 0.5;
+  border-style: dashed;
+}
+
+.admin-inlagg-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-ljus);
+}
+
+.admin-inlagg-meta strong {
+  color: var(--brun);
+  font-size: 1rem;
+}
+
+.admin-epost {
+  font-style: italic;
+}
+
+.admin-status {
+  font-weight: 600;
+}
+
+.admin-inlagg-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+.admin-knappar {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.admin-knapp {
+  padding: 0.3rem 0.9rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+}
+
+.admin-knapp-toggle {
+  color: var(--brun);
+  border-color: var(--brun);
+}
+.admin-knapp-toggle:hover {
+  background: var(--brun);
+  color: var(--papper);
+}
+
+.admin-knapp-delete {
+  color: var(--rodbrunt);
+  border-color: var(--rodbrunt);
+}
+.admin-knapp-delete:hover {
+  background: var(--rodbrunt);
+  color: var(--papper);
+}

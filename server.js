@@ -160,6 +160,10 @@ app.get('/', requireAuth, (req, res) => {
   res.render('index', { brev: getBrevIndex(lang), lang });
 });
 
+app.get('/om', requireAuth, (req, res) => {
+  res.render('om', { lang: getLang(req) });
+});
+
 app.get('/brev/:id', requireAuth, (req, res) => {
   const lang = getLang(req);
   const brevet = brevData.find(b => b.id === parseInt(req.params.id));

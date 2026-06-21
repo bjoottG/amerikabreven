@@ -16,6 +16,7 @@
       <nav>
         <a href="/?lang=<%= lang %>"><%= lang === 'en' ? 'All letters' : 'Alla brev' %></a>
         <a href="/gastbok?lang=<%= lang %>" class="aktiv-nav"><%= lang === 'en' ? 'Guestbook' : 'Gästbok' %></a>
+        <a href="/om?lang=<%= lang %>"><%= lang === 'en' ? 'About' : 'Om' %></a>
         <a href="/logout"><%= lang === 'en' ? 'Log out' : 'Logga ut' %></a>
         <div class="lang-vaxlare">
           <a href="/gastbok?lang=sv" class="lang-knapp<%= lang === 'sv' ? ' aktiv' : '' %>">SV</a>

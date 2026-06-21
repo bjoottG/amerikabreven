@@ -751,6 +751,64 @@ footer {
 }
 
 /* ============================================================
+   OM-SIDAN
+============================================================ */
+
+.om-wrap {
+  max-width: 720px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+}
+
+.om-sektion {
+  background: var(--papper);
+  border: 1px solid var(--linje);
+  padding: 2rem 2.4rem;
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.07);
+}
+
+.om-rubrik {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--brun);
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--linje-ljus);
+  padding-bottom: 0.5rem;
+}
+
+.om-text p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin-bottom: 0.9em;
+}
+
+.om-text p:last-child {
+  margin-bottom: 0;
+}
+
+.om-text strong {
+  color: var(--brun);
+  font-weight: 600;
+}
+
+.om-signatur {
+  margin-top: 1.4rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--linje-ljus);
+  font-style: italic;
+  color: var(--text-ljus);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.om-avdelare {
+  border: none;
+  border-top: 1px solid var(--linje-ljus);
+  margin: 1.5rem 0;
+}
+
+/* ============================================================
    GÄSTBOK
 ============================================================ */
 

@@ -132,6 +132,73 @@ function getBrevIndex(lang) {
   }));
 }
 
+// ── Login logging ─────────────────────────────────────────────────────────────
+
+function getIP(req) {
+  const fwd = req.headers['x-forwarded-for'];
+  if (fwd) return fwd.split(',')[0].trim();
+  return req.ip || req.socket?.remoteAddress || 'okänd';
+}
+
+async function slaUppGeo(ip) {
+  if (ip === '::1' || ip === '127.0.0.1' || ip.startsWith('192.168.') || ip.startsWith('10.')) {
+    return 'lokal anslutning';
+  }
+  try {
+    const ctrl = new AbortController();
+    const tid = setTimeout(() => ctrl.abort(), 3000);
+    const svar = await fetch(`http://ip-api.com/json/${ip}?fields=status,country,city,regionName`, { signal: ctrl.signal });
+    clearTimeout(tid);
+    const d = await svar.json();
+    if (d.status === 'success') {
+      return [d.city, d.regionName, d.country].filter(Boolean).join(', ');
+    }
+  } catch {}
+  return 'okänd plats';
+}
+
+async function loggaInloggning(req, typ) {
+  const ip = getIP(req);
+  const entry = {
+    id: genId(),
+    typ,
+    ip,
+    datum: new Date().toISOString(),
+    geo: 'slår upp…'
+  };
+
+  if (redis) {
+    await redis.lpush('login:loggar', JSON.stringify(entry));
+    await redis.ltrim('login:loggar', 0, 199);
+  }
+
+  // Geo-uppslag i bakgrunden – uppdatera entry
+  slaUppGeo(ip).then(async (geo) => {
+    entry.geo = geo;
+    if (redis) {
+      // Hämta listan, hitta och ersätt entry
+      const lista = await redis.lrange('login:loggar', 0, -1);
+      for (let i = 0; i < lista.length; i++) {
+        try {
+          const e = JSON.parse(lista[i]);
+          if (e.id === entry.id) {
+            await redis.lset('login:loggar', i, JSON.stringify({ ...e, geo }));
+            break;
+          }
+        } catch {}
+      }
+    }
+  }).catch(() => {});
+}
+
+async function hamtaLoggar() {
+  if (redis) {
+    const lista = await redis.lrange('login:loggar', 0, -1);
+    return lista.map(r => { try { return JSON.parse(r); } catch { return null; } }).filter(Boolean);
+  }
+  return [];
+}
+
 // ── Site auth routes ───────────────────────────────────────────────────────────
 
 app.get('/login', (req, res) => {
@@ -139,9 +206,10 @@ app.get('/login', (req, res) => {
   res.render('login', { fel: null });
 });
 
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
   if (req.body.losenord === PASSWORD) {
     req.session.authenticated = true;
+    loggaInloggning(req, 'site').catch(() => {});
     res.redirect('/');
   } else {
     res.render('login', { fel: 'Fel lösenord. Försök igen.' });
@@ -204,10 +272,11 @@ app.get('/admin/login', (req, res) => {
   res.render('admin-login', { fel: null });
 });
 
-app.post('/admin/login', (req, res) => {
+app.post('/admin/login', async (req, res) => {
   if (req.body.losenord === ADMIN_PASSWORD) {
     req.session.admin = true;
     req.session.authenticated = true;
+    loggaInloggning(req, 'admin').catch(() => {});
     res.redirect('/admin/gastbok');
   } else {
     res.render('admin-login', { fel: 'Fel lösenord.' });
@@ -222,6 +291,11 @@ app.get('/admin/logout', (req, res) => {
 app.get('/admin/gastbok', requireAdmin, async (req, res) => {
   const inlagg = await hamtaInlagg(true);
   res.render('admin-gastbok', { inlagg });
+});
+
+app.get('/admin/loggar', requireAdmin, async (req, res) => {
+  const loggar = await hamtaLoggar();
+  res.render('admin-loggar', { loggar });
 });
 
 app.post('/admin/gastbok/delete/:id', requireAdmin, async (req, res) => {

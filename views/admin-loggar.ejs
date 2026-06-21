@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – Inloggningsloggar – Amerikabreven</title>
+  <link rel="stylesheet" href="/css/stil.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1><a href="/" class="header-lank">Amerikabreven</a></h1>
+      <p class="undertitel">Administration – Inloggningsloggar</p>
+      <nav>
+        <a href="/">Breven</a>
+        <a href="/admin/gastbok">Gästbok</a>
+        <a href="/admin/loggar" class="aktiv-nav">Loggar</a>
+        <a href="/admin/logout">Avsluta admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-wrap">
+      <h2>Inloggningsloggar (<%= loggar.length %>)</h2>
+
+      <% if (loggar.length === 0) { %>
+        <p class="gastbok-tom">Inga loggade inloggningar ännu.</p>
+      <% } else { %>
+        <table class="logg-tabell">
+          <thead>
+            <tr>
+              <th>Tidpunkt</th>
+              <th>Typ</th>
+              <th>IP-adress</th>
+              <th>Geografisk plats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% loggar.forEach(e => { %>
+              <tr class="logg-rad <%= e.typ === 'admin' ? 'logg-admin' : '' %>">
+                <td class="logg-datum"><%= new Date(e.datum).toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' }) %></td>
+                <td class="logg-typ">
+                  <span class="logg-typ-badge logg-typ-<%= e.typ %>">
+                    <%= e.typ === 'admin' ? '🔑 Admin' : '👤 Besökare' %>
+                  </span>
+                </td>
+                <td class="logg-ip"><code><%= e.ip %></code></td>
+                <td class="logg-geo"><%= e.geo || '–' %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } %>
+    </div>
+  </main>
+
+  <footer>
+    &copy; Amerikabreven
+  </footer>
+</body>
+</html>

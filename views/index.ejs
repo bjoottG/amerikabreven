@@ -29,15 +29,21 @@
   </header>
 
   <main>
-    <p class="intro-text">
-      <% if (lang === 'en') { %>
-        In the late 19th and early 20th centuries, hundreds of thousands of Swedes left their homes for a new life in America.
-        These letters are their voices — written by oil lamp, at kitchen tables, with homesickness in their hands and hope in their hearts.
+    <div class="bakgrund-panel">
+      <% if (lang === 'sv') { %>
+        <div class="bakgrund-text">
+          <p>Välkommen att ta del av brev skrivna av David Petree under hans och hans vän Arvids emigration från Sverige till Amerika på 1890-talet. David skriver och skickar sina brev till föräldrarna hemma i Sverige.</p>
+          <p>David var min mamma Margits morbror, och under 1950-talet skrev Margit av breven med sin skrivmaskin. David var&nbsp;…</p>
+        </div>
+        <div class="bakgrund-signatur">Rolf Otterberg, f. 1938</div>
       <% } else { %>
-        Under slutet av 1800-talet och tidigt 1900-tal lämnade hundratusentals svenskar sina hem för ett nytt liv i Amerika.
-        Dessa brev är deras röster — skrivna vid oljelampor, på köksbordet, med hemlängtan i handen och hopp i hjärtat.
+        <div class="bakgrund-text">
+          <p>Welcome to read letters written by David Petree during his and his friend Arvid's emigration from Sweden to America in the 1890s. David wrote and sent his letters to his parents back home in Sweden.</p>
+          <p>David was my mother Margit's uncle, and during the 1950s, Margit copied out the letters using her typewriter. David was&nbsp;…</p>
+        </div>
+        <div class="bakgrund-signatur">Rolf Otterberg, b. 1938</div>
       <% } %>
-    </p>
+    </div>
 
     <div class="brev-lista">
       <% brev.forEach(b => { %>
